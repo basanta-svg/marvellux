@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ValueCard from '../components/ValueCard.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="Bhutan Travel Guide | Marvels Luxe Bhutan"
+  description="A practical guide to traveling in Bhutan — the best season to visit, money and costs, culture and etiquette, altitude and packing, and how to stay connected."
+  ogImage="/images/bridungla3.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/bridungla3.jpg"} title={"Bhutan Travel Guide"} />
+
+    <!-- ================================ OVERVIEW ================================ -->
+    <section class="pt-30 pr-0 pb-20 pl-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] grid grid-cols-1 gap-12 min-[960px]:grid-cols-[1.3fr_1fr] min-[960px]:gap-16 reveal">
+          <div class="[&_h2]:text-[32px] [&_h2]:mt-2.5 min-[768px]:[&_h2]:text-[42px] [&_p]:mt-4.5! [&_p]:text-[15px]! [&_p]:leading-[1.75] [&_p]:text-[#55534f] [&_p]:max-w-140">
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">PLANNING YOUR TRIP</p>
+            <h2>Everything to Know Before You Go</h2>
+            <p>Bhutan is unlike anywhere else to plan a trip to. Every international visitor travels on a private, guided itinerary arranged through a licensed local operator, tourism is deliberately kept small under the country's High Value, Low Volume policy, and the kingdom itself is best understood a little before you land. This guide covers the practical basics — when to go, what things cost, how to dress, and what to pack — so the only thing left to plan is the itinerary itself.</p>
+            <p>For visa and entry specifics, see our <a href="/visa-entry.html" class="text-charcoal font-semibold border-b border-b-charcoal [transition:color_0.3s_ease,_border-color_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark">Visa &amp; Entry guide</a>.</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-0.25 bg-charcoal-line border border-charcoal-line [align-content:start] [align-self:start]">
+            <div class="bg-white py-5 px-5.5">
+              <span class="block text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Capital</span>
+              <span class="block mt-1.5 font-heading text-[16px] text-charcoal leading-[1.3]">Thimphu</span>
+            </div>
+            <div class="bg-white py-5 px-5.5">
+              <span class="block text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Currency</span>
+              <span class="block mt-1.5 font-heading text-[16px] text-charcoal leading-[1.3]">Ngultrum (BTN)</span>
+            </div>
+            <div class="bg-white py-5 px-5.5">
+              <span class="block text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Language</span>
+              <span class="block mt-1.5 font-heading text-[16px] text-charcoal leading-[1.3]">Dzongkha</span>
+            </div>
+            <div class="bg-white py-5 px-5.5">
+              <span class="block text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Time Zone</span>
+              <span class="block mt-1.5 font-heading text-[16px] text-charcoal leading-[1.3]">GMT+6 (No DST)</span>
+            </div>
+            <div class="bg-white py-5 px-5.5">
+              <span class="block text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Electricity</span>
+              <span class="block mt-1.5 font-heading text-[16px] text-charcoal leading-[1.3]">230V, Type D/F/G</span>
+            </div>
+            <div class="bg-white py-5 px-5.5">
+              <span class="block text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Only Airport</span>
+              <span class="block mt-1.5 font-heading text-[16px] text-charcoal leading-[1.3]">Paro (PBH)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ WHEN TO GO ================================ -->
+    <section class="py-30 px-0 bg-soft-white" id="when-to-go">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">SEASONS</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">When to Go</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Bhutan has a distinct character in every season. There isn't a wrong time to visit — only a different one.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-10 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-4 min-[1024px]:gap-8">
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 3v3M12 18v3M5 12H2M22 12h-3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1\"></path><circle cx=\"12\" cy=\"12\" r=\"4\"></circle></svg>"} title={"Spring — Mar to May"}>Rhododendrons and magnolias bloom across the valleys, skies are mostly clear, and Paro Tshechu falls in this window. The most popular season to travel, alongside autumn.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M16 13a4 4 0 10-8 0\"></path><path d=\"M4 15h16M6 19h.01M10 19h.01M14 19h.01M18 19h.01\"></path></svg>"} title={"Summer — Jun to Aug"} delay={"1"}>The monsoon brings warm, humid weather and lush, deep-green valleys. Rain tends to fall in short afternoon bursts rather than all day, and visitor numbers are at their lowest.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M12 2l-4 4M12 2l4 4M12 22l-4-4M12 22l4-4M2 12h20M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l-4 4\"></path></svg>"} title={"Autumn — Sep to Nov"} delay={"2"}>Bhutan's clearest, driest skies and the best Himalayan views, timed with Thimphu Tshechu. The single most popular season to visit, and worth booking well ahead for.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M4.9 4.9l14.2 14.2M19.1 4.9L4.9 19.1M2 12h3M19 12h3M12 2v3M12 19v3\"></path></svg>"} title={"Winter — Dec to Feb"} delay={"3"}>Cold, crisp and quiet, with near-empty dzongs and the Black-Necked Crane Festival in Phobjikha. Days are often sunny even as temperatures drop sharply after dark.</ValueCard>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ GETTING THERE & AROUND ================================ -->
+    <section class="pt-0 pr-0 pb-30 pl-0 bg-soft-white max-[1023px]:pb-20 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="grid grid-cols-1 gap-10 min-[720px]:grid-cols-[1fr_1fr] min-[720px]:gap-14">
+          <div class="[&_h3]:text-[19px] [&_p]:mt-4 [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p+p]:mt-3!">
+            <h3>Getting There &amp; Around</h3>
+            <p>Nearly every visitor arrives by air into Paro, Bhutan's only international airport, on a dramatic descent between forested ridgelines. A smaller number arrive overland through Phuentsholing on the Indian border, the only land crossing open to non-Indian travelers.</p>
+            <p>Independent travel isn't permitted for international tourists — you move between valleys with a private guide and driver throughout, which is also simply the most comfortable way to cover Bhutan's winding mountain roads. Distances that look short on a map can take hours: Paro to Punakha, for instance, crosses the 3,100-metre Dochula Pass and takes roughly three hours.</p>
+          </div>
+          <div class="[&_h3]:text-[19px] [&_p]:mt-4 [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p+p]:mt-3!">
+            <h3>Money &amp; Costs</h3>
+            <ul class="mt-5 flex flex-col gap-3.5 [&_li]:relative [&_li]:pl-7.5 [&_li]:text-[14.5px] [&_li]:leading-[1.5] [&_li]:text-[#55534f] [&_li::before]:content-[''] [&_li::before]:absolute! [&_li::before]:left-0 [&_li::before]:top-0.75 [&_li::before]:w-4.5 [&_li::before]:h-4.5 [&_li::before]:rounded-[50%] [&_li::before]:bg-no-repeat [&_li::before]:bg-center [&_li::before]:[background-size:10px_10px] [&_li::before]:bg-[rgba(249,166,26,0.14)] [&_li::before]:bg-[url('/images/icon-check.svg')]">
+              <li>The Ngultrum (BTN) is pegged 1:1 to the Indian Rupee, and Indian Rupees are widely accepted (large INR 500/1000 notes are sometimes restricted)</li>
+              <li>US Dollars, Euros and other major currencies can be exchanged at banks in Thimphu and Paro</li>
+              <li>Cards are accepted at most hotels and some shops in Thimphu and Paro, but cash is still king elsewhere</li>
+              <li>ATMs are limited outside the main towns — carry enough cash for rural valleys</li>
+              <li>Your Marvels Luxe itinerary already covers guide, driver, accommodation, meals and the SDF, so day-to-day cash is mostly for tips and souvenirs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ CULTURE & ETIQUETTE ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">CUSTOMS</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Culture &amp; Etiquette</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Bhutan's dzongs and temples are working religious and civil buildings, not museums. A few customs go a long way.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-10 min-[720px]:grid-cols-[1fr_1fr] min-[720px]:gap-14">
+          <div class="[&_h3]:text-[19px] [&_p]:mt-4 [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p+p]:mt-3!">
+            <span class="text-[12px] font-semibold tracking-[0.1em] uppercase text-brand-yellow-dark mb-2">Do</span>
+            <ul class="mt-5 flex flex-col gap-3.5 [&_li]:relative [&_li]:pl-7.5 [&_li]:text-[14.5px] [&_li]:leading-[1.5] [&_li]:text-[#55534f] [&_li::before]:content-[''] [&_li::before]:absolute! [&_li::before]:left-0 [&_li::before]:top-0.75 [&_li::before]:w-4.5 [&_li::before]:h-4.5 [&_li::before]:rounded-[50%] [&_li::before]:bg-no-repeat [&_li::before]:bg-center [&_li::before]:[background-size:10px_10px] [&_li::before]:bg-[rgba(249,166,26,0.14)] [&_li::before]:bg-[url('/images/icon-check.svg')]">
+              <li>Dress modestly for dzongs and temples — shoulders and knees covered</li>
+              <li>Remove hats and sunglasses before entering a temple</li>
+              <li>Walk clockwise around chortens, mani walls and prayer wheels</li>
+              <li>Offer and receive things — especially from monks — with both hands</li>
+              <li>Ask your guide before photographing monks, altars or ceremonies</li>
+            </ul>
+          </div>
+          <div class="[&_h3]:text-[19px] [&_p]:mt-4 [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p+p]:mt-3!">
+            <span class="text-[12px] font-semibold tracking-[0.1em] uppercase text-brand-yellow-dark mb-2">Don't</span>
+            <ul class="mt-5 flex flex-col gap-3.5 [&_li]:relative [&_li]:pl-7.5 [&_li]:text-[14.5px] [&_li]:leading-[1.5] [&_li]:text-[#55534f] [&_li::before]:content-[''] [&_li::before]:absolute! [&_li::before]:left-0 [&_li::before]:top-0.75 [&_li::before]:w-4.5 [&_li::before]:h-4.5 [&_li::before]:rounded-[50%] [&_li::before]:bg-no-repeat [&_li::before]:bg-center [&_li::before]:[background-size:10px_10px] [&_li::before]:bg-charcoal-line [&_li::before]:bg-[url('/images/icon-cross.svg')]">
+              <li>Don't point your feet toward a shrine, statue or person</li>
+              <li>Don't touch someone's head, even a child's</li>
+              <li>Don't wear shorts or sleeveless tops inside a dzong</li>
+              <li>Don't photograph temple interiors — it's usually prohibited</li>
+              <li>Don't point directly at people or images of Buddha with a single finger</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ PRACTICAL INFO ================================ -->
+    <section class="py-30 px-0 bg-soft-white">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">GOOD TO KNOW</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Health, Packing &amp; Connectivity</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">A few practical notes worth reading before you pack.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-10 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-4 min-[1024px]:gap-8">
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z\"></path><circle cx=\"12\" cy=\"9\" r=\"2.6\"></circle></svg>"} title={"Altitude"}>Paro and Thimphu sit around 2,200–2,300m; Dochula Pass reaches 3,100m and high treks go well beyond. Pace yourself, stay hydrated, and talk to your doctor about travel health and insurance before you go.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0M4 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0\"></path></svg>"} title={"What to Pack"} delay={"1"}>Layers, whatever the season — mornings and evenings stay cool even in summer. Sturdy walking shoes, strong sun protection for high altitude, and modest clothing for temple visits.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12.5a10 10 0 0114 0M8 16a5.5 5.5 0 018 0M12 19.5h.01\"></path></svg>"} title={"Staying Connected"} delay={"2"}>Local SIM cards are available on arrival at Paro Airport and in towns. WiFi is common in hotels in Thimphu and Paro, but signal turns patchy in remote valleys and over high passes.</ValueCard>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta text={"Ready to see it for yourself? Tell us your travel dates and we'll shape a private itinerary around exactly how you want to see Bhutan."} />
+</BaseLayout>

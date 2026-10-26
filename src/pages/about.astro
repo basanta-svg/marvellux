@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ValueCard from '../components/ValueCard.astro';
+import TeamCard from '../components/TeamCard.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="About Us | Marvels Luxe Bhutan"
+  description="Marvels Luxe is a Bhutan-based travel team building private, considered journeys through Bhutan. Read our story, what we stand for, who plans your trip, and how we travel sustainably."
+  ogImage="/images/gasa-festivals-header.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/gasa-festivals-header.jpg"} title={"About Marvels Luxe"} />
+
+    <!-- ================================ OUR STORY ================================ -->
+    <section class="py-30 px-0 bg-soft-white overflow-hidden max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="story">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter) grid grid-cols-1 gap-16 items-center min-[960px]:grid-cols-[1fr_1fr] min-[960px]:gap-12 about-us-grid">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] [&_h2]:text-[36px] min-[768px]:[&_h2]:text-[46px] [&_p]:text-[#55534f] [&_p]:text-[15px]! [&_p]:max-w-115 [&_p]:mt-4.5 about-us-text reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">OUR STORY</p>
+          <h2>Built Around the Way You Travel</h2>
+          <p>Marvels Luxe began with a simple frustration: most itineraries sold as "Bhutan tours" were the same fixed circuit, repeated for every traveler regardless of how they actually liked to move through a place. We wanted something else — journeys planned the way a friend who lived here would plan them, built around your pace, your interests, and the season you're arriving in.</p>
+          <p>Today that means every departure starts as a conversation, not a template. Our Bhutan-based team spends as much time listening to how you want to travel as they do drawing the route itself, then stays close to the journey from the first enquiry to the last morning in the valleys.</p>
+          <a href="/contact.html" class="inline-flex items-center gap-2.5 font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease,_transform_0.3s_ease] whitespace-nowrap active:[transform:scale(0.97)] bg-brand-yellow text-charcoal border border-brand-yellow hover:bg-brand-yellow-dark hover:border-brand-yellow-dark [.about-us-text_&]:mt-7">Start a Conversation</a>
+        </div>
+        <div class="relative max-w-115 my-0 mx-auto min-[640px]:max-w-120 min-[960px]:[.about-us-grid.is-reversed_&]:order-2">
+          <div class="relative rounded-none overflow-hidden shadow-[0_24px_48px_rgba(30,30,30,0.16)] bg-soft-white [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:block w-full aspect-[4/5]">
+            <img src="/images/2022-10-02-09.55.39.jpg" alt="Sunlit courtyard of a traditional Bhutanese dzong beneath a clear blue sky">
+          </div>
+          <span class="absolute left-1/2 bottom-0 [transform:translate(-50%,_50%)] z-3 w-21 h-21 rounded-none bg-transparent flex items-center justify-center p-3.5 [&_img]:w-full [&_img]:h-full [&_img]:object-contain [&_img]:[animation:aboutBadgeSpin_14s_linear_infinite]" aria-hidden="true">
+            <img src="/images/site-icon.png" alt="">
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ WHY MARVELS LUXE ================================ -->
+    <section class="py-30 px-0 bg-soft-white" id="why">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">WHY MARVELS LUXE</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">What Shapes Every Journey</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Four things we don't compromise on, whatever the itinerary ends up looking like.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-10 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-4 min-[1024px]:gap-8">
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"8\" r=\"3.2\"></circle><path d=\"M5.5 20c0-3.9 2.9-7 6.5-7s6.5 3.1 6.5 7\"></path></svg>"} title={"Private &amp; Personal"}>Every departure is just your group, your guide and your vehicle — never merged with strangers to fill a seat.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z\"></path><circle cx=\"12\" cy=\"9\" r=\"2.6\"></circle></svg>"} title={"Local Expertise"} delay={"1"}>A Bhutan-based team and trusted local partners who know these valleys, dialects and monasteries as home.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 9l6-6 6 6-6 12z\"></path><path d=\"M6 9h12\"></path></svg>"} title={"Considered Detail"} delay={"2"}>From pacing to permits, the small decisions are made in advance so your trip runs without friction.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 21c0-9 6-15 15-15 0 9-6 15-15 15z\"></path><path d=\"M5 21c3-3 6-7 9-11\"></path></svg>"} title={"Sustainable by Design"} delay={"3"}>Journeys shaped around Bhutan's High Value, Low Volume approach to travel — not around it.</ValueCard>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ OUR TEAM ================================ -->
+    <section class="py-30 px-0 bg-soft-white" id="team">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">OUR TEAM</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Who Plans Your Journey</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">A small, Bhutan-based team, each looking after one part of the journey so nothing falls between the cracks.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-10 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-4 min-[1024px]:gap-8">
+          <TeamCard id={"team-trip-designers"} initials={"TD"} title={"Trip Designers"} role={"Itinerary &amp; Planning"}>Shape every day of your journey around how you actually like to travel.</TeamCard>
+          <TeamCard id={"team-local-guides"} initials={"LG"} title={"Local Guides"} role={"On the Ground"} delay={"1"}>Bhutanese guides who know these valleys, dialects and monasteries as home.</TeamCard>
+          <TeamCard id={"team-drivers-logistics"} initials={"DL"} title={"Drivers &amp; Logistics"} role={"Transfers &amp; Timing"} delay={"2"}>Careful mountain driving and quiet logistics, so your days run without friction.</TeamCard>
+          <TeamCard id={"team-guest-relations"} initials={"GR"} title={"Guest Relations"} role={"Before &amp; During Travel"} delay={"3"}>Your point of contact from first enquiry to the last morning in Bhutan.</TeamCard>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ SUSTAINABILITY ================================ -->
+    <section class="py-30 px-0 bg-soft-white overflow-hidden max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="sustainability">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter) grid grid-cols-1 gap-16 items-center min-[960px]:grid-cols-[1fr_1fr] min-[960px]:gap-12 about-us-grid is-reversed">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] [&_h2]:text-[36px] min-[768px]:[&_h2]:text-[46px] [&_p]:text-[#55534f] [&_p]:text-[15px]! [&_p]:max-w-115 [&_p]:mt-4.5 about-us-text reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">SUSTAINABILITY</p>
+          <h2>Travel That Keeps the Valleys Quiet</h2>
+          <p>Bhutan caps its own tourism deliberately — a High Value, Low Volume policy built around a daily Sustainable Development Fee that funds free healthcare, education and conservation nationwide. We plan every itinerary inside that framework rather than around it, working with local guides, family-run lodges and small operators who keep that value in the communities you pass through.</p>
+          <div class="flex flex-wrap gap-8 mt-8">
+            <div class="min-w-30 max-w-45">
+              <span class="block font-heading text-[32px] text-brand-yellow-dark">100%</span>
+              <span class="block mt-1 text-[12px] tracking-[0.04em] text-[#6b6864]">Private departures, never grouped with strangers</span>
+            </div>
+            <div class="min-w-30 max-w-45">
+              <span class="block font-heading text-[32px] text-brand-yellow-dark">SDF</span>
+              <span class="block mt-1 text-[12px] tracking-[0.04em] text-[#6b6864]">Included in every quoted price, no hidden fees</span>
+            </div>
+            <div class="min-w-30 max-w-45">
+              <span class="block font-heading text-[32px] text-brand-yellow-dark">Bhutan</span>
+              <span class="block mt-1 text-[12px] tracking-[0.04em] text-[#6b6864]">Based team, planning every detail on the ground</span>
+            </div>
+          </div>
+          <a href="/#blog" class="inline-flex items-center gap-2 font-semibold text-[13px] tracking-[0.06em] uppercase text-charcoal border-b border-b-charcoal pb-0.75 [transition:color_0.3s_ease,_border-color_0.3s_ease,_gap_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark hover:gap-3 mt-7">Read More in Our Journal
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+        <div class="relative max-w-115 my-0 mx-auto min-[640px]:max-w-120 min-[960px]:[.about-us-grid.is-reversed_&]:order-2">
+          <div class="relative rounded-none overflow-hidden shadow-[0_24px_48px_rgba(30,30,30,0.16)] bg-soft-white [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:block w-full aspect-[4/5]">
+            <img src="/images/baribrang-garden.jpg" alt="Misty mountain forest with a timber footbridge, prayer flags and a stone cairn">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta  />
+</BaseLayout>

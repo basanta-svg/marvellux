@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import BlogSlide from '../components/BlogSlide.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="Journal | Marvels Luxe Bhutan"
+  description="Stories, festival dates and travel notes from Marvels Luxe — written by the guests and guides who lived them, from packing lists to the Sustainable Development Fee."
+  ogImage="/images/trongsatsechu1.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/trongsatsechu1.jpg"} title={"The Journal"} />
+
+    <!-- ================================ BLOG GRID ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="journal">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">NOTES ON BHUTAN</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Stories From the Valleys</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Festival dates, packing lists and quiet corners of the kingdom, written by the guests and guides who found them.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-9 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-3 min-[1024px]:gap-8 blog-index-grid">
+
+          <BlogSlide image={"/images/thimphu-tshechu-by-bassem-nimah43.jpg"} alt={"Colourfully dressed performers lined up at Thimphu Tshechu"} date={"12 March 2026"} author={"Claire Whitfield"} title={"Inside a Paro Tsechu: What First-Time Visitors Should Know"} desc={"Where to stand, when to arrive, and how to read the masked dances without a program."} href={"#"} reveal />
+
+          <BlogSlide image={"/images/2022-10-02-11.25.08.jpg"} alt={"Mountain stream running beside a traditional dzong in a forested valley"} date={"4 February 2026"} author={"Marcus Adeyemi"} title={"Packing for the Higher Himalaya: A Trekker's Checklist"} desc={"What our guides actually carry above 3,500 metres — and what's safe to leave behind."} href={"#"} reveal delay={"1"} />
+
+          <BlogSlide image={"/images/hot-stone-bath.jpg"} alt={"Traditional Bhutanese hot stone bath overlooking the valley"} date={"28 January 2026"} author={"Naomi Ishikawa"} title={"The Ritual of the Bhutanese Hot Stone Bath"} desc={"River stones, ash and artemisia — the quiet science behind a centuries-old tradition."} href={"#"} reveal delay={"2"} />
+
+          <BlogSlide image={"/images/baribrang-garden.jpg"} alt={"Misty mountain garden with a wooden footbridge"} date={"19 April 2026"} author={"Daniel Voss"} title={"Why Bhutan Caps Its Daily Visitors — And What It Means for You"} desc={"A short guide to the Sustainable Development Fee, and why it keeps the valleys quiet."} href={"#"} reveal />
+
+          <BlogSlide image={"/images/lll06468.jpg"} alt={"Portrait of a woman in an intricately woven traditional dress and silver jewellery"} date={"7 May 2026"} author={"Priya Nandakumar"} title={"Bhutan's Textile Traditions: Reading a Kira and Gho"} desc={"How pattern, weave and colour still quietly signal region, occasion and rank."} href={"#"} reveal delay={"1"} />
+
+          <BlogSlide image={"/images/trashiyangtse-town.jpg"} alt={"Traditional village street in Trashiyangtse"} date={"22 June 2026"} author={"Tom Bellamy"} title={"A Morning in Trashiyangtse: Bhutan's Quietest Valley"} desc={"Wood-turners, a hilltop dzong and a valley most itineraries still skip."} href={"#"} reveal delay={"2"} />
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta  />
+</BaseLayout>

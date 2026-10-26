@@ -1,0 +1,259 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FaqItem from '../components/FaqItem.astro';
+import FinalCta from '../components/FinalCta.astro';
+
+const eyebrow = 'font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark';
+const reveal = 'opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] reveal';
+const section = 'py-30 px-0 max-[1023px]:py-20 max-[767px]:py-16';
+const wrap = 'max-w-320 my-0 mx-auto py-0 px-(--gutter)';
+const h2 = 'text-[length:clamp(32px,_4.4vw,_54px)] leading-[1.1] mt-3.5';
+
+const blockH2 = 'font-heading font-semibold text-[22px] tracking-[0.02em] uppercase mb-4.5';
+const bodyP = 'text-[16px] leading-[1.85] text-[#55534f]';
+const fieldLabel = 'flex flex-col gap-2 text-[12px] font-semibold tracking-[0.08em] uppercase text-[rgba(250,250,248,0.75)]';
+const fieldInput = 'w-full bg-transparent border border-[rgba(250,250,248,0.3)] py-3 px-4 text-[15px] normal-case tracking-normal font-normal text-soft-white placeholder:text-[rgba(250,250,248,0.4)] focus:outline-none focus:border-brand-yellow';
+const facts = [
+  ['Destinations', 'Paro, Thimphu, Punakha', '<path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle>'],
+  ['Best Season', 'March to May and September to November', '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path>'],
+  ['Max Altitude', 'Dochula Pass, 3,100 m / 10,170 ft', '<path d="M3 20l6-10 4 6 2-3 6 7H3z"></path>'],
+  ['Duration', '6 Days, 5 Nights', '<circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path>'],
+  ['Pace', 'Easy touring and short walks', '<path d="M4 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path><path d="M4 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path>'],
+  ['Group', 'Private, never shared', '<circle cx="12" cy="8" r="3.2"></circle><path d="M5.5 20c0-3.9 2.9-7 6.5-7s6.5 3.1 6.5 7"></path>'],
+];
+const highlights = [
+  "Hike to Taktsang, the Tiger's Nest",
+  'Visit Rinpung Dzong in Paro',
+  "Tashichho Dzong, Thimphu's seat of government",
+  'Cross Dochula Pass at 3,100 metres',
+  'Punakha Dzong at the meeting of two rivers',
+  'Guided throughout by a licensed private guide',
+];
+const included = [
+  'Licensed private guide and driver throughout',
+  'All accommodation, on a private basis',
+  'Meals as specified in your final itinerary',
+  'All internal transfers and airport pickups',
+  'Entrance fees to every site on the itinerary',
+  "Bhutan's Sustainable Development Fee (SDF)",
+  'Visa clearance, arranged on your behalf',
+];
+const excluded = [
+  'International flights to and from Paro',
+  'Personal spending, gratuities and souvenirs',
+  'Travel insurance',
+  'Single-room supplement, if wanted or needed',
+  'Alcoholic beverages, unless specified',
+];
+const related = [
+  { href: '/festivals.html', img: '/images/thimphu-tshechu-by-bassem-nimah43.jpg', alt: 'Masked dancers at the Thimphu Tshechu', title: 'Festivals of Bhutan', text: 'Time your trip to a tshechu and watch the courtyards fill with mask dances.' },
+  { href: '/trekking.html', img: '/images/bridungla3.jpg', alt: 'A snow-capped Himalayan peak above conifers', title: 'Trekking in Bhutan', text: 'Walk high ridgelines and sacred lakes between the valleys.' },
+  { href: '/adventures.html', img: '/images/marcus-westberg-bumthang-202312.jpg', alt: 'A valley in Bumthang', title: 'Adventures', text: 'Cycling, rafting and other active ways to see the kingdom.' },
+];
+const snapshot = [
+  ['Duration', '6 Days, 5 Nights', '<circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path>'],
+  ['Group', 'Private, Never Shared', '<circle cx="12" cy="8" r="3.2"></circle><path d="M5.5 20c0-3.9 2.9-7 6.5-7s6.5 3.1 6.5 7"></path>'],
+  ['Route', 'Paro → Thimphu → Punakha', '<path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"></path><circle cx="12" cy="9" r="2.6"></circle>'],
+  ['Pace', 'Easy, Touring & Short Walks', '<path d="M4 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path><path d="M4 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path>'],
+  ['Best Time', 'Mar–May & Sep–Nov', '<path d="M12 3v3M12 18v3M5 12H2M22 12h-3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"></path><circle cx="12" cy="12" r="4"></circle>'],
+];
+
+const days = [
+  { n: '01', place: 'Paro', title: 'Arrive in Paro', img: '/images/2022-10-02-11.25.08.jpg', alt: 'A mountain stream running through a green Bhutanese valley beside a traditional building', facts: ['Altitude 2,200 m', 'Airport transfer ≈ 15 min'], body: "Land at Bhutan's only international airport, set in a valley ringed by pine forest and farmhouses. Your guide meets you at arrivals for the short transfer into town, with the afternoon free to settle in, walk the main street, or visit Rinpung Dzong and the National Museum if energy allows." },
+  { n: '02', place: 'Paro', title: "Hike to Taktsang, the Tiger's Nest", img: '/images/baribrang-garden.jpg', alt: 'A misty forested hillside with a timber footbridge and prayer flags', facts: ['Walk 4–5 hrs return', 'Climb ≈ 700 m'], body: "An early start for the trail up to Taktsang Palphug Monastery, clinging to a cliff 900 metres above the valley floor. The climb is gradual with a rest at the halfway teahouse; those who'd rather not walk the full ascent can take a mule partway. The afternoon stays unhurried — a quiet return through the valley." },
+  { n: '03', place: 'Paro → Thimphu', title: 'Into the Capital', img: '/images/2022-10-02-09.55.39.jpg', alt: 'The long timber-framed courtyard of a Bhutanese dzong under a blue sky', facts: ['Drive ≈ 1.5 hrs', 'Altitude 2,320 m'], body: "Drive to Thimphu, Bhutan's capital and the only one in the world without a traffic light. Visit Tashichho Dzong, seat of the government and the Je Khenpo, timed for late afternoon when the courtyard empties of officials. Round out the day at the Buddha Dordenma statue and the weekend handicrafts market if your dates align." },
+  { n: '04', place: 'Thimphu → Punakha', title: 'Over Dochula Pass', img: '/images/bridungla3.jpg', alt: 'A snow-capped Himalayan peak rising above a stand of dark conifers', facts: ['Drive ≈ 3 hrs', 'Pass 3,100 m'], body: "Cross Dochula Pass at 3,100 metres, its 108 memorial chortens framed by the Himalaya on a clear morning, before descending into the warmer, lower valley of Punakha. Visit Punakha Dzong itself — former winter capital and one of Bhutan's most striking, set at the confluence of the Pho Chhu and Mo Chhu rivers." },
+  { n: '05', place: 'Punakha', title: 'The Valley Floor', img: '/images/2022-10-02-08.42.56.jpg', alt: 'A covered wooden bridge over a stream in a green valley', facts: ['Easy walking 2–3 hrs', 'Altitude 1,250 m'], body: "A gentle day on foot: cross Punakha's suspension bridge, one of the longest in Bhutan, and walk the rice-terrace path to Chimi Lhakhang, the fertility temple built by the \"Divine Madman\" Drukpa Kunley. The afternoon is left open for a village walk or simply resting by the river." },
+  { n: '06', place: 'Punakha → Paro', title: 'Departure', img: '/images/kurje-lhakhang.jpg', alt: 'A Bhutanese temple standing in a green meadow with prayer flags', facts: ['Drive ≈ 4 hrs', 'Back over Dochula'], body: 'Drive back over Dochula Pass to Paro in time for your onward flight. If your schedule allows a later departure, this day can be extended into an overnight and reshaped around a trek, a festival, or more time in any one valley.' },
+];
+
+const route = [
+  { place: 'Paro', note: '2 nights' },
+  { place: 'Thimphu', note: '1 night', drive: '≈ 1.5 hrs' },
+  { place: 'Punakha', note: '2 nights', drive: '≈ 3 hrs' },
+  { place: 'Paro', note: 'Departure', drive: '≈ 4 hrs' },
+];
+
+const tiles = [
+  { img: '/images/hot-stone-bath.jpg', alt: 'Traditional Bhutanese hot stone bath overlooking the valley', tag: 'Optional extra', title: 'Farmhouse hot-stone bath', text: 'River stones heated in a wood fire and dropped into a timber tub — the traditional way to ease the legs after Taktsang.', span: 'min-[860px]:col-span-7' },
+  { img: '/images/by-marcus-westberg-punakha-2023_21.jpg', alt: 'A woman preparing vegetables in a traditional Bhutanese farmhouse kitchen', tag: 'Optional extra', title: 'Lunch in a village farmhouse', text: 'Share a home-cooked meal in a Punakha family kitchen and hear how a valley household lives.', span: 'min-[860px]:col-span-5' },
+  { img: '/images/ogyen-choling-by-matt-dutile13.jpg', alt: 'A calm timber-panelled guest room in a traditional Bhutanese house', tag: 'Where you stay', title: 'Five quiet nights', text: 'Locally owned, comfortable hotels — two nights in Paro, one in Thimphu and two in Punakha. Final hotels are confirmed in your proposal.', span: 'min-[860px]:col-span-5' },
+  { img: '/images/final-cta.jpg', alt: 'Two monks in maroon robes beside the ornate windows of a Bhutanese temple', tag: 'Optional extra', title: 'Butter-lamp evening', text: 'A quiet offering of butter lamps at dusk with your guide, when the dzong courtyards and lhakhangs are at their stillest.', span: 'min-[860px]:col-span-7' },
+];
+
+const notes = [
+  ['Rooms & solo travellers', "Two travellers share a twin or double room. Travelling alone? You'll have your own room — any single-room supplement is shown in your proposal first."],
+  ['Where your SDF goes', 'The nightly Sustainable Development Fee supports free health care and education and forest protection. It is already built into the price we quote.'],
+  ['What to pack', 'Layers for cool mornings, sturdy shoes for Taktsang, sun protection for the altitude, and modest clothing for dzong visits.'],
+];
+---
+
+<BaseLayout
+  title="Dzongs of the Western Valleys | Marvels Luxe Bhutan"
+  description="A 6-day private journey through Paro, Thimphu and Punakha — the fortress-monasteries still at the heart of Bhutanese religious and civil life. Full day-by-day itinerary, inclusions and trip facts."
+  ogImage="/images/jakar-dzong-1.jpg"
+>
+  <!-- ================================ HERO ================================ -->
+  <section class="relative min-h-[100vh] flex items-end overflow-hidden text-white bg-black">
+    <div class="absolute inset-[-4%] bg-cover [background-position:center_32%] [animation:heroZoom_16s_ease-out_forwards]" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0.85) 100%), url('/images/jakar-dzong-1.jpg')"></div>
+    <div class={`relative z-2 w-full ${wrap} pt-40 pb-25 max-[767px]:pt-30 max-[767px]:pb-16`}>
+      <span class="inline-block mb-4.5 py-1.75 px-3.75 border border-[rgba(255,255,255,0.5)] text-[12px] font-semibold tracking-[0.12em] uppercase">6 Days / 5 Nights</span>
+      <h1 class="text-white text-[34px] min-[768px]:text-[52px] max-w-180">Dzongs of the Western Valleys</h1>
+      <p class="mt-5 max-w-140 text-[16px] min-[768px]:text-[18px] leading-[1.75] text-[rgba(255,255,255,0.85)]">A private journey through Paro, Thimphu and Punakha — the fortress-monasteries still at the heart of Bhutanese religious and civil life.</p>
+    </div>
+  </section>
+
+  <!-- ================================ TRIP DETAIL ================================ -->
+  <section class={`bg-white ${section}`}>
+    <div class={`${wrap} grid gap-12 items-start min-[1024px]:grid-cols-[minmax(0,7fr)_minmax(0,3fr)]`}>
+      <div class="min-w-0">
+        <!-- Facts card -->
+        <div class="border border-charcoal-line p-9 max-[767px]:p-6">
+          <div class="grid gap-x-12 gap-y-5.5 mb-7 min-[640px]:grid-cols-2">
+            {facts.map(([label, value, icon]) => (
+              <div class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center shrink-0 w-8.5 h-8.5 mt-0.5 text-brand-yellow-dark border border-charcoal-line">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" set:html={icon}></svg>
+                </span>
+                <span class="flex flex-col gap-1">
+                  <span class="text-[13px] text-[#807d78]">{label}</span>
+                  <span class="text-[15.5px] font-bold leading-[1.4] text-charcoal">{value}</span>
+                </span>
+              </div>
+            ))}
+          </div>
+          <a href="#enquire" class="inline-flex items-center font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill bg-brand-yellow text-charcoal border border-brand-yellow [transition:background_0.3s_ease,_border-color_0.3s_ease] hover:bg-brand-yellow-dark hover:border-brand-yellow-dark">Book This Tour</a>
+        </div>
+        <p class="py-5 mt-6 text-[14.5px] leading-[1.7] text-[#c0392b]">Note: Use this as a general guide to get an idea of the tour. Dates, pace and detours are yours to set, so the itinerary will be customised to the season, your interests, group size and preferred duration.</p>
+
+        <!-- Overview -->
+        <div class="mt-14">
+          <h2 class={blockH2}>Tour Overview</h2>
+          <p class={bodyP}>Over six days, a private guide takes you through Rinpung Dzong and the cliffside trail to Taktsang in Paro, Tashichho Dzong — the seat of government in Thimphu — and Punakha Dzong at the meeting of two rivers. These fortress-monasteries still sit at the heart of Bhutanese religious and civil life.</p>
+          <p class={`${bodyP} mt-4`}>It's the itinerary most first-time travelers build their Bhutan trip around. Dates, pace and detours are yours to set, and pricing is tailored to them — this is simply where we'd start.</p>
+        </div>
+
+        <!-- Highlights -->
+        <div class="mt-14">
+          <h2 class={blockH2}>Tour Highlights</h2>
+          <ul class="grid gap-x-8 gap-y-3.5 min-[640px]:grid-cols-2">
+            {highlights.map((h) => (
+              <li class="flex items-start gap-2.5 text-[15px] leading-[1.6] text-[#55534f]">
+                <svg class="shrink-0 mt-1 text-brand-yellow-dark" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 7"></path></svg>
+                {h}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Itinerary -->
+        <div class="mt-14" id="itinerary">
+          <h2 class={blockH2}>Day By Day Itinerary</h2>
+          <div class="border-t border-t-charcoal-line">
+            {days.map((d, i) => (
+              <FaqItem q={`Day ${d.n} — ${d.title}`} open={i === 0}>
+                <p class="text-[11px] font-semibold tracking-[0.14em] uppercase text-brand-yellow-dark mb-3">{d.place} · {d.facts.join('  ·  ')}</p>
+                <p>{d.body}</p>
+              </FaqItem>
+            ))}
+          </div>
+        </div>
+
+        <!-- Included / not included -->
+        <div class="mt-14 grid gap-10 min-[640px]:grid-cols-2">
+          <div>
+            <h2 class={blockH2}>What's Included</h2>
+            <ul class="flex flex-col gap-3">
+              {included.map((t) => (<li class="flex items-start gap-2.5 text-[15px] leading-[1.5] text-[#55534f]"><svg class="shrink-0 mt-0.75 text-brand-yellow-dark" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 7"></path></svg>{t}</li>))}
+            </ul>
+          </div>
+          <div>
+            <h2 class={blockH2}>Not Included</h2>
+            <ul class="flex flex-col gap-3">
+              {excluded.map((t) => (<li class="flex items-start gap-2.5 text-[15px] leading-[1.5] text-[#55534f]"><svg class="shrink-0 mt-0.75 text-[#c0392b]" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"></path></svg>{t}</li>))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Good to know -->
+        <div class="mt-14">
+          <h2 class={blockH2}>Good To Know</h2>
+          <div class="grid gap-8">
+            {notes.map(([t, d]) => (
+              <div>
+                <h3 class="text-[18px]">{t}</h3>
+                <p class="mt-2 text-[14.5px] leading-[1.75] text-[#55534f]">{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Package cost -->
+        <div class="mt-14 bg-soft-white border border-charcoal-line border-l-4 border-l-brand-yellow p-8 max-[767px]:p-6">
+          <h3 class="text-[22px]">Package Cost</h3>
+          <p class="mt-3 text-[15px] leading-[1.8] text-[#55534f]">On top of the SDF of USD 100 per person per night, there is an additional cost covering hotel rooms, meals, entrance fees, guide and private vehicle. Send us an enquiry and we'll customise a package for your dates, budget and interests.</p>
+        </div>
+
+        <!-- Enquire -->
+        <div class="mt-8 bg-charcoal text-soft-white p-9 max-[767px]:p-6" id="enquire">
+          <h3 class="text-[26px] text-soft-white">Enquire About This Tour</h3>
+          <p class="mt-3 text-[15px] leading-[1.8] text-[rgba(250,250,248,0.75)]">Fill out the form and one of our travel designers will come back with availability and pricing for Dzongs of the Western Valleys.</p>
+          <form class="mt-7 grid gap-5" action="/contact.html" method="get">
+            <div class="grid gap-5 min-[640px]:grid-cols-2">
+              <label class={fieldLabel}>Full Name<input type="text" name="name" required placeholder="Your full name" class={fieldInput} /></label>
+              <label class={fieldLabel}>Email Address<input type="email" name="email" required placeholder="you@example.com" class={fieldInput} /></label>
+              <label class={fieldLabel}>Phone Number<input type="tel" name="phone" placeholder="+1 555 123 4567" class={fieldInput} /></label>
+              <label class={fieldLabel}>Preferred Travel Dates<input type="text" name="dates" placeholder="e.g. March 2027" class={fieldInput} /></label>
+            </div>
+            <label class={fieldLabel}>Message<textarea name="message" rows="4" placeholder="Group size, interests or anything else we should know…" class={fieldInput}></textarea></label>
+            <button type="submit" class="justify-self-start font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill bg-brand-yellow text-charcoal border border-brand-yellow [transition:background_0.3s_ease] hover:bg-brand-yellow-dark">Submit Enquiry</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="min-[1024px]:sticky min-[1024px]:top-28">
+        <h3 class="text-[20px] pb-4 mb-2 border-b border-b-charcoal-line">Related Journeys</h3>
+        <div class="flex flex-col">
+          {related.map((r) => (
+            <a href={r.href} class="group flex gap-4 py-5 border-b border-b-charcoal-line">
+              <img src={r.img} alt={r.alt} loading="lazy" class="shrink-0 w-24 h-24 object-cover" />
+              <div>
+                <h4 class="font-body text-[15px] font-semibold leading-[1.3] group-hover:text-brand-yellow-dark [transition:color_0.3s_ease]">{r.title}</h4>
+                <p class="mt-1.5 text-[13px] leading-[1.55] text-[#6b6864]">{r.text}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <a href="/cultural-journeys.html" class="mt-6 inline-flex items-center font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill border border-charcoal text-charcoal [transition:background_0.3s_ease,_color_0.3s_ease] hover:bg-charcoal hover:text-soft-white">All Cultural Journeys</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ==================================== FAQ ==================================== -->
+  <section class={`bg-white border-t border-t-charcoal-line ${section}`} id="faq">
+    <div class={wrap}>
+      <div class={`flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 ${reveal}`}>
+        <div>
+          <p class={`${eyebrow} on-light`}>BEFORE YOU BOOK</p>
+          <h2 class={h2}>Questions About This Journey</h2>
+        </div>
+        <a href="/faq.html" class="inline-flex items-center gap-2 font-semibold text-[13px] tracking-[0.06em] uppercase text-charcoal border-b border-b-charcoal pb-0.75 [transition:color_0.3s_ease,_border-color_0.3s_ease,_gap_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark hover:gap-3">General FAQs
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+        <FaqItem q={"How physically demanding is this itinerary?"} open><p>Gentle overall. The one climb, to Taktsang, is the only sustained walk, gaining roughly 700 metres over 4–5 hours round trip on a well-maintained trail with a teahouse rest stop. Everything else is touring on foot around dzong courtyards and short valley walks.</p></FaqItem>
+        <FaqItem q={"Can this be combined with trekking or a festival?"}><p>Yes — this itinerary is often extended with a short trek like the Druk Path, or timed to land on a Paro or Thimphu Tshechu. Tell us your dates and we'll build the combination around them.</p></FaqItem>
+        <FaqItem q={"What happens if a dzong is closed to visitors that day?"}><p>Dzongs occasionally close to the public for government business or ceremonies. Your guide checks access in advance and reorders the day if needed — this itinerary always carries enough flexibility to absorb a change like that.</p></FaqItem>
+        <FaqItem q={"Can I travel alone on this journey?"}><p>Yes. Solo travelers have their own room throughout, and the guide and driver are still entirely yours. Any single-room supplement is shown in your proposal.</p></FaqItem>
+        <FaqItem q={"Do I need to book my own hotels or flights?"}><p>Hotels, transfers and meals are all arranged by us. You only book your own international flights to and from Paro — we're glad to advise on routing and timing once your dates are set.</p></FaqItem>
+        <FaqItem q={"Is six days enough, or should we add time?"}><p>Six days covers the western valleys comfortably without feeling rushed. Many travelers extend by two or three days to add Bumthang, a trek, or simply slow the pace — easy to fold into this same route.</p></FaqItem>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ FINAL CTA ================================ -->
+  <FinalCta text={"Tell us your travel dates and we'll shape this itinerary — or build a new one — around exactly how you want to see Bhutan."} />
+</BaseLayout>

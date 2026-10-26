@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import TourCard from '../components/TourCard.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="Adventures | Marvels Luxe Bhutan"
+  description="Six ways to raise your pulse in Bhutan — whitewater, mountain biking, via ferrata, fly-fishing and high-altitude camping, all built into a private itinerary."
+  ogImage="/images/2022-10-02-08.42.56.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/2022-10-02-08.42.56.jpg"} title={"Adventure"} />
+
+    <!-- ================================ TOUR CARDS ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="adventures-list">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Choose Your Adventure</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">For travelers who want their itinerary to move a little faster. Each activity below is built into a private journey, not sold on its own.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-9 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-3 min-[1024px]:gap-8">
+
+          <TourCard image={"/images/2022-10-02-11.25.08.jpg"} alt={"Mountain stream running beside a traditional dzong in a forested valley"} title={"Whitewater Rafting on the Mo Chhu"} duration={"Half-Day"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} />
+
+          <TourCard image={"/images/by-matt-dutile13.jpg"} alt={"Four young monks standing together outside a monastery entrance"} title={"Mountain Biking the Dochula Descent"} duration={"Full-Day"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"1"} />
+
+          <TourCard image={"/images/jakar-dzong-1.jpg"} alt={"Jakar Dzong fortress-monastery on a forested hillside with blossoming trees in the foreground"} title={"Hiking to Tiger’s Nest at Dawn"} duration={"Half-Day"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"2"} />
+
+          <TourCard image={"/images/hot-stone-bath.jpg"} alt={"Traditional Bhutanese hot stone bath overlooking the valley"} title={"Traditional Archery Experience"} duration={"Half-Day"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} />
+
+          <TourCard image={"/images/ogyen-choling-by-matt-dutile13.jpg"} alt={"Doorway of a restored heritage manor house at Ogyen Choling"} title={"Fly-Fishing Bhutan’s Rivers"} duration={"Full-Day"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"1"} />
+
+          <TourCard image={"/images/trashiyangtse-town.jpg"} alt={"Traditional village street in Trashiyangtse, eastern Bhutan"} title={"High-Altitude Camping"} duration={"2 Days, 1 Night"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"2"} />
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta  />
+</BaseLayout>

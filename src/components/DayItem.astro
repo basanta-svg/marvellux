@@ -1,0 +1,28 @@
+---
+interface Props {
+  /** Two-digit day number, e.g. "01". */
+  number: string;
+  place: string;
+  title: string;
+  open?: boolean;
+}
+const { number, place, title, open = false } = Astro.props;
+---
+
+<div class:list={["border-b border-b-charcoal-line faq-item", "day-faq-item", { open }, "opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] reveal"]}>
+  <button class="w-full flex items-center justify-between text-left font-body font-semibold text-[15.5px] [.faq-item.open_&]:text-brand-yellow-dark py-6.5 px-0.5 gap-5 faq-question" aria-expanded={open ? 'true' : 'false'}>
+    <span class="flex items-center gap-5.5 flex-1 min-w-0 text-left max-[560px]:gap-3.5">
+      <span class="shrink-0 w-11 font-heading font-semibold text-[26px] text-charcoal-line leading-[1] [.day-faq-item.open_&]:text-brand-yellow max-[560px]:w-8.5 max-[560px]:text-[21px]">{number}</span>
+      <span class="flex flex-col gap-1 min-w-0">
+        <span class="text-[10.5px] font-semibold tracking-[0.1em] uppercase text-brand-yellow-dark" set:html={place} />
+        <span class="font-heading font-semibold text-[19px] text-charcoal [.day-faq-item.open_&]:text-brand-yellow-dark max-[560px]:text-[16.5px]" set:html={title} />
+      </span>
+    </span>
+    <span class="[.faq-question_&]:w-4.5 [.faq-question_&]:h-4.5 [.faq-question_&]:relative [.faq-question_&]:shrink-0 [.faq-question_&::before]:content-[''] [.faq-question_&::before]:absolute [.faq-question_&::before]:bg-charcoal [.faq-question_&::before]:[transition:transform_0.3s_ease,_background_0.3s_ease] [.faq-question_&::after]:content-['']! [.faq-question_&::after]:absolute! [.faq-question_&::after]:bg-charcoal [.faq-question_&::after]:[transition:transform_0.3s_ease,_background_0.3s_ease]! [.faq-question_&::before]:top-1/2 [.faq-question_&::before]:left-0 [.faq-question_&::before]:w-full [.faq-question_&::before]:h-0.5 [.faq-question_&::before]:[transform:translateY(-50%)] [.faq-question_&::after]:left-1/2! [.faq-question_&::after]:top-0! [.faq-question_&::after]:h-full! [.faq-question_&::after]:w-0.5! [.faq-question_&::after]:[transform:translateX(-50%)] [.faq-item.open_.faq-question_&::after]:[transform:translateX(-50%)_rotate(90deg)]! [.faq-item.open_.faq-question_&::after]:opacity-[0] [.faq-item.open_.faq-question_&::before]:bg-brand-yellow!"></span>
+  </button>
+  <div class="max-h-0 overflow-hidden [transition:max-height_0.5s_ease] [&_p]:pt-0 [&_p]:pr-0.5 [&_p]:pb-6 [&_p]:pl-0.5 [&_p]:text-[14.5px] [&_p]:text-[#56534e] [&_p]:max-w-120 [.day-faq-item_&_p]:max-w-215! [.day-faq-item_&_p]:pl-16.5! [.day-faq-item_&_p]:pr-6! max-[560px]:[.day-faq-item_&_p]:pl-0! faq-answer" style={open ? 'max-height:400px' : undefined}><slot /></div>
+</div>
+
+<script>
+  import '../scripts/faq';
+</script>

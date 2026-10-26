@@ -1,0 +1,20 @@
+---
+import ExpCard from './ExpCard.astro';
+---
+
+<section class="relative py-30 px-0 bg-soft-white overflow-hidden max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16 experiences" id="experiences">
+    <div class="absolute top-1/2 -right-35 w-130 h-130 bg-[url('/images/pattern.png')] bg-contain bg-no-repeat [transform:translateY(-50%)] opacity-[0.05] pointer-events-none z-0 max-[767px]:w-80 max-[767px]:h-80 max-[767px]:-right-22.5" aria-hidden="true"></div>
+    <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter) [.experiences_&]:relative [.experiences_&]:z-1">
+      <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-180 mb-14 reveal">
+        <h2 class="text-[32px] uppercase tracking-[0.01em] min-[768px]:text-[42px]">Experiences</h2>
+        <p class="font-body text-[15px] text-[#55534f] mt-4.5 max-w-155">Unlock the layered story of Bhutan through experiences shaped around you — sacred cliffside monasteries, high mountain trails, colourful festivals and quiet wellness retreats. Every journey is planned by a Bhutan-based team who know these valleys as home.</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-4">
+        <ExpCard image={"/images/kurje-lhakhang.jpg"} alt={"Kurje Lhakhang temple beneath prayer flags in Bumthang"} title={"Culture"} desc={"Discover monasteries, traditions and Bhutanese heritage."} href={"#journeys"} cta={"View All Journeys"} />
+        <ExpCard image={"/images/2022-10-02-11.25.08.jpg"} alt={"Mountain stream running beside a traditional dzong in a forested valley"} title={"Treks"} desc={"Explore the breathtaking Himalayan landscapes on foot."} href={"#journeys"} cta={"View All Journeys"} />
+        <ExpCard image={"/images/thimphu-tshechu-by-bassem-nimah43.jpg"} alt={"Dancers in traditional Bhutanese dress at Thimphu Tshechu"} title={"Festivals"} desc={"Experience the vibrant culture and spiritual traditions of Bhutan."} href={"#journeys"} cta={"View All Journeys"} />
+        <ExpCard image={"/images/hot-stone-bath.jpg"} alt={"Traditional Bhutanese hot stone bath overlooking the valley"} title={"Wellness"} desc={"Slow down and reconnect with mindful retreats and rituals."} href={"#journeys"} cta={"View All Journeys"} />
+      </div>
+    </div>
+  </section>

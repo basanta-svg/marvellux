@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ValueCard from '../components/ValueCard.astro';
+import FaqItem from '../components/FaqItem.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="Visa & Entry | Marvels Luxe Bhutan"
+  description="How to get a Bhutan visa — who needs one, the Sustainable Development Fee (SDF), the step-by-step application process, and entry points by air and land."
+  ogImage="/images/2022-10-02-10.05.11.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/2022-10-02-10.05.11.jpg"} title={"Visa &amp; Entry"} />
+
+    <!-- ================================ OVERVIEW ================================ -->
+    <section class="pt-30 pr-0 pb-20 pl-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] grid grid-cols-1 gap-12 min-[960px]:grid-cols-[1.3fr_1fr] min-[960px]:gap-16 reveal">
+          <div class="[&_h2]:text-[32px] [&_h2]:mt-2.5 min-[768px]:[&_h2]:text-[42px] [&_p]:mt-4.5! [&_p]:text-[15px]! [&_p]:leading-[1.75] [&_p]:text-[#55534f] [&_p]:max-w-140">
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">BEFORE YOU TRAVEL</p>
+            <h2>How Entry to Bhutan Works</h2>
+            <p>Bhutan doesn't offer visas on arrival or independent tourist visas — every international visitor's application is lodged by a licensed local tour operator, as part of booking a private itinerary. That isn't a formality we add on top of your trip; it's simply how entry to Bhutan works, and we handle the entire process for you.</p>
+            <p>Indian, Bangladeshi and Maldivian nationals travel under a separate, simpler regional arrangement, covered below.</p>
+          </div>
+
+          <div class="bg-white border border-charcoal-line [align-self:start]">
+            <div class="flex items-center gap-4 py-4 px-5.5 border-b border-b-charcoal-line [transition:background_0.3s_ease] hover:bg-soft-white">
+              <span class="shrink-0 w-10 h-10 rounded-[50%] bg-[rgba(249,166,26,0.12)] text-brand-yellow-dark flex items-center justify-center [&_svg]:w-4.5 [&_svg]:h-4.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path></svg>
+              </span>
+              <span class="flex flex-col gap-0.5">
+                <span class="text-[10.5px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Visa Fee</span>
+                <span class="font-heading text-[16px] text-charcoal leading-[1.2]">US$40, One-Time</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-4 py-4 px-5.5 border-b border-b-charcoal-line [transition:background_0.3s_ease] hover:bg-soft-white">
+              <span class="shrink-0 w-10 h-10 rounded-[50%] bg-[rgba(249,166,26,0.12)] text-brand-yellow-dark flex items-center justify-center [&_svg]:w-4.5 [&_svg]:h-4.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="3"></circle></svg>
+              </span>
+              <span class="flex flex-col gap-0.5">
+                <span class="text-[10.5px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">SDF</span>
+                <span class="font-heading text-[16px] text-charcoal leading-[1.2]">US$100 / Night</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-4 py-4 px-5.5 border-b border-b-charcoal-line [transition:background_0.3s_ease] hover:bg-soft-white">
+              <span class="shrink-0 w-10 h-10 rounded-[50%] bg-[rgba(249,166,26,0.12)] text-brand-yellow-dark flex items-center justify-center [&_svg]:w-4.5 [&_svg]:h-4.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+              </span>
+              <span class="flex flex-col gap-0.5">
+                <span class="text-[10.5px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Processing</span>
+                <span class="font-heading text-[16px] text-charcoal leading-[1.2]">~5 Working Days</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-4 py-4 px-5.5 border-b border-b-charcoal-line [transition:background_0.3s_ease] hover:bg-soft-white">
+              <span class="shrink-0 w-10 h-10 rounded-[50%] bg-[rgba(249,166,26,0.12)] text-brand-yellow-dark flex items-center justify-center [&_svg]:w-4.5 [&_svg]:h-4.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><circle cx="12" cy="10" r="2.5"></circle><path d="M9 17h6"></path></svg>
+              </span>
+              <span class="flex flex-col gap-0.5">
+                <span class="text-[10.5px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">Passport</span>
+                <span class="font-heading text-[16px] text-charcoal leading-[1.2]">6+ Months Validity</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-4 py-4 px-5.5 border-b border-b-charcoal-line [transition:background_0.3s_ease] hover:bg-soft-white">
+              <span class="shrink-0 w-10 h-10 rounded-[50%] bg-[rgba(249,166,26,0.12)] text-brand-yellow-dark flex items-center justify-center [&_svg]:w-4.5 [&_svg]:h-4.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+              </span>
+              <span class="flex flex-col gap-0.5">
+                <span class="text-[10.5px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">By Air</span>
+                <span class="font-heading text-[16px] text-charcoal leading-[1.2]">Paro Airport (PBH)</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-4 py-4 px-5.5 border-b border-b-charcoal-line [transition:background_0.3s_ease] hover:bg-soft-white">
+              <span class="shrink-0 w-10 h-10 rounded-[50%] bg-[rgba(249,166,26,0.12)] text-brand-yellow-dark flex items-center justify-center [&_svg]:w-4.5 [&_svg]:h-4.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"></path><circle cx="12" cy="9" r="2.6"></circle></svg>
+              </span>
+              <span class="flex flex-col gap-0.5">
+                <span class="text-[10.5px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark">By Land</span>
+                <span class="font-heading text-[16px] text-charcoal leading-[1.2]">Phuentsholing Only</span>
+              </span>
+            </div>
+            <div class="p-5">
+              <a href="/contact.html" class="inline-flex items-center gap-2.5 font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease,_transform_0.3s_ease] whitespace-nowrap active:[transform:scale(0.97)] bg-brand-yellow text-charcoal border border-brand-yellow hover:bg-brand-yellow-dark hover:border-brand-yellow-dark w-full justify-center">Start Your Application
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ WHO NEEDS A VISA ================================ -->
+    <section class="py-30 px-0 bg-soft-white">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">ENTRY REQUIREMENTS</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Who Needs a Visa</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Requirements differ depending on where you're traveling from.</p>
+        </div>
+
+        <div class="grid gap-10 min-[1024px]:gap-8 grid-cols-2 max-w-225 max-[639px]:grid-cols-1">
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"></rect><path d=\"M3 9h18M8 4v0\"></path></svg>"} title={"International Visitors"}>Everyone outside India, Bangladesh and the Maldives needs a visa, arranged in advance through a licensed operator like Marvels Luxe. There is no visa-on-arrival for international travelers — your clearance letter is issued before you fly, and stamped into your passport on arrival.</ValueCard>
+          <ValueCard icon={"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z\"></path><circle cx=\"12\" cy=\"9\" r=\"2.6\"></circle></svg>"} title={"India, Bangladesh &amp; Maldives"} delay={"1"}>Indian nationals travel on a permit rather than a visa, and can apply online in advance or on arrival with a passport-size photo. Bangladeshi and Maldivian nationals apply through a similarly simplified process.</ValueCard>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ SDF TABLE ================================ -->
+    <section class="pr-0 pb-30 pl-0 bg-soft-white max-[1023px]:pb-20 max-[767px]:pb-16 pt-0">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">THE COST OF ENTRY</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">The Sustainable Development Fee</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Every visitor to Bhutan pays a nightly Sustainable Development Fee (SDF), which directly funds free healthcare, free education and environmental conservation nationwide. We include it in every quote — there's nothing to arrange separately.</p>
+        </div>
+
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] overflow-x-auto reveal">
+          <table class="w-full max-w-180 [border-collapse:collapse] [&_th]:text-left [&_th]:py-4 [&_th]:px-5 [&_td]:text-left! [&_td]:py-4! [&_td]:px-5! [&_td]:border-b [&_td]:border-b-charcoal-line [&_th]:text-[11px] [&_th]:font-semibold [&_th]:tracking-[0.08em] [&_th]:uppercase [&_th]:text-brand-yellow-dark [&_th]:border-b! [&_th]:border-b-brand-yellow-dark! [&_td]:text-[14.5px]! [&_td]:text-charcoal! [&_td:last-child]:font-semibold!">
+            <thead>
+              <tr><th>Traveler</th><th>SDF Rate</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>International visitors, age 12+</td><td>US$100 per night</td></tr>
+              <tr><td>International children, age 6–11</td><td>US$50 per night</td></tr>
+              <tr><td>International children, under 6</td><td>Exempt</td></tr>
+              <tr><td>Indian nationals, age 12+</td><td>Nu 1,200 per night</td></tr>
+              <tr><td>Indian nationals, age 6–12</td><td>Nu 600 per night</td></tr>
+              <tr><td>Indian nationals, under 6</td><td>Exempt</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-5 max-w-180 text-[13px] leading-[1.65] text-[#6b6864]">Rates shown apply under the current SDF framework, in effect through 31 August 2027 and subject to periodic review by the Royal Government of Bhutan. We confirm the exact fee for your travel dates when we prepare your application. A 5% Goods and Services Tax applies to tourism services (not the SDF itself) from 1 January 2026.</p>
+      </div>
+    </section>
+
+    <!-- ================================ HOW THE VISA WORKS ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="how-it-works">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">THE PROCESS</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">How the Visa Works</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Five steps, and we handle three of them for you.</p>
+        </div>
+
+        <div class="flex flex-col itinerary-list">
+          <article class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex gap-7 py-10 px-0 border-b border-b-charcoal-line [.itinerary-list_&:first-child]:pt-0 [.itinerary-list_&:last-child]:border-b-0 [.itinerary-list_&:last-child]:pb-0 max-[560px]:gap-4 max-[560px]:py-7 max-[560px]:px-0 reveal">
+            <span class="flex-[0_0_auto] font-heading font-semibold text-[length:clamp(32px,_4vw,_44px)] text-charcoal-line leading-[1] w-22.5 max-[560px]:w-12 max-[560px]:text-[26px]">01</span>
+            <div class="flex-1 min-w-0 [&_h3]:text-[21px] [&_h3]:mt-2 [&_p]:mt-2.5! [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p]:max-w-160">
+              <span class="inline-block text-[11px] font-semibold tracking-[0.1em] uppercase text-brand-yellow-dark">You</span>
+              <h3>Confirm Your Itinerary</h3>
+              <p>Finalize your travel dates and route with our team. Bhutan requires every visa application to be lodged by a licensed local operator — there's no way to apply independently.</p>
+            </div>
+          </article>
+          <article class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex gap-7 py-10 px-0 border-b border-b-charcoal-line [.itinerary-list_&:first-child]:pt-0 [.itinerary-list_&:last-child]:border-b-0 [.itinerary-list_&:last-child]:pb-0 max-[560px]:gap-4 max-[560px]:py-7 max-[560px]:px-0 reveal">
+            <span class="flex-[0_0_auto] font-heading font-semibold text-[length:clamp(32px,_4vw,_44px)] text-charcoal-line leading-[1] w-22.5 max-[560px]:w-12 max-[560px]:text-[26px]">02</span>
+            <div class="flex-1 min-w-0 [&_h3]:text-[21px] [&_h3]:mt-2 [&_p]:mt-2.5! [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p]:max-w-160">
+              <span class="inline-block text-[11px] font-semibold tracking-[0.1em] uppercase text-brand-yellow-dark">Marvels Luxe</span>
+              <h3>We Submit Your Application</h3>
+              <p>We file your visa application and SDF payment through the official Department of Immigration system on your behalf, using your passport details and photo.</p>
+            </div>
+          </article>
+          <article class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex gap-7 py-10 px-0 border-b border-b-charcoal-line [.itinerary-list_&:first-child]:pt-0 [.itinerary-list_&:last-child]:border-b-0 [.itinerary-list_&:last-child]:pb-0 max-[560px]:gap-4 max-[560px]:py-7 max-[560px]:px-0 reveal">
+            <span class="flex-[0_0_auto] font-heading font-semibold text-[length:clamp(32px,_4vw,_44px)] text-charcoal-line leading-[1] w-22.5 max-[560px]:w-12 max-[560px]:text-[26px]">03</span>
+            <div class="flex-1 min-w-0 [&_h3]:text-[21px] [&_h3]:mt-2 [&_p]:mt-2.5! [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p]:max-w-160">
+              <span class="inline-block text-[11px] font-semibold tracking-[0.1em] uppercase text-brand-yellow-dark">~5 Working Days</span>
+              <h3>Approval &amp; Clearance Letter</h3>
+              <p>Applications are typically processed within about five working days. Once approved, you receive a visa clearance letter to travel with.</p>
+            </div>
+          </article>
+          <article class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex gap-7 py-10 px-0 border-b border-b-charcoal-line [.itinerary-list_&:first-child]:pt-0 [.itinerary-list_&:last-child]:border-b-0 [.itinerary-list_&:last-child]:pb-0 max-[560px]:gap-4 max-[560px]:py-7 max-[560px]:px-0 reveal">
+            <span class="flex-[0_0_auto] font-heading font-semibold text-[length:clamp(32px,_4vw,_44px)] text-charcoal-line leading-[1] w-22.5 max-[560px]:w-12 max-[560px]:text-[26px]">04</span>
+            <div class="flex-1 min-w-0 [&_h3]:text-[21px] [&_h3]:mt-2 [&_p]:mt-2.5! [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p]:max-w-160">
+              <span class="inline-block text-[11px] font-semibold tracking-[0.1em] uppercase text-brand-yellow-dark">On Arrival</span>
+              <h3>Stamping at the Border</h3>
+              <p>Present your clearance letter and passport at Paro Airport or Phuentsholing. Your visa is stamped directly into your passport at the port of entry — nothing more to do.</p>
+            </div>
+          </article>
+          <article class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex gap-7 py-10 px-0 border-b border-b-charcoal-line [.itinerary-list_&:first-child]:pt-0 [.itinerary-list_&:last-child]:border-b-0 [.itinerary-list_&:last-child]:pb-0 max-[560px]:gap-4 max-[560px]:py-7 max-[560px]:px-0 reveal">
+            <span class="flex-[0_0_auto] font-heading font-semibold text-[length:clamp(32px,_4vw,_44px)] text-charcoal-line leading-[1] w-22.5 max-[560px]:w-12 max-[560px]:text-[26px]">05</span>
+            <div class="flex-1 min-w-0 [&_h3]:text-[21px] [&_h3]:mt-2 [&_p]:mt-2.5! [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p]:max-w-160">
+              <span class="inline-block text-[11px] font-semibold tracking-[0.1em] uppercase text-brand-yellow-dark">Paro &amp; Phuentsholing</span>
+              <h3>Entering the Country</h3>
+              <p>Most travelers fly into Paro, Bhutan's only international airport. Phuentsholing, on the Indian border, is the sole land crossing open to non-Indian international visitors.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ PASSPORT & DOCUMENTS ================================ -->
+    <section class="pt-0 pr-0 pl-0 bg-soft-white pb-0">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="grid gap-10 min-[720px]:gap-14 grid-cols-1 max-w-160">
+          <div class="[&_h3]:text-[19px] [&_p]:mt-4 [&_p]:text-[14.5px]! [&_p]:leading-[1.7] [&_p]:text-[#55534f] [&_p+p]:mt-3!">
+            <h3>What You'll Need to Apply</h3>
+            <ul class="mt-5 flex flex-col gap-3.5 [&_li]:relative [&_li]:pl-7.5 [&_li]:text-[14.5px] [&_li]:leading-[1.5] [&_li]:text-[#55534f] [&_li::before]:content-[''] [&_li::before]:absolute! [&_li::before]:left-0 [&_li::before]:top-0.75 [&_li::before]:w-4.5 [&_li::before]:h-4.5 [&_li::before]:rounded-[50%] [&_li::before]:bg-no-repeat [&_li::before]:bg-center [&_li::before]:[background-size:10px_10px] [&_li::before]:bg-[rgba(249,166,26,0.14)] [&_li::before]:bg-[url('/images/icon-check.svg')]">
+              <li>A passport valid for at least 6 months beyond your travel dates</li>
+              <li>A digital, passport-style photograph</li>
+              <li>A scanned copy of your passport's biographical page</li>
+              <li>Confirmed travel dates and itinerary</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================== MINI FAQ ==================================== -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="faq">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 reveal">
+          <div>
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">QUICK ANSWERS</p>
+            <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Visa Questions</h2>
+          </div>
+          <a href="/faq.html" class="inline-flex items-center gap-2 font-semibold text-[13px] tracking-[0.06em] uppercase text-charcoal border-b border-b-charcoal pb-0.75 [transition:color_0.3s_ease,_border-color_0.3s_ease,_gap_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark hover:gap-3">All FAQs
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+          <FaqItem q={"Can I apply for a Bhutan visa myself?"} open><p>No — international tourist visas must be lodged by a licensed Bhutanese tour operator as part of a booked itinerary. There's no independent or walk-in visa application process for international visitors.</p></FaqItem>
+          <FaqItem q={"Is the SDF the same as the visa fee?"}><p>No, they're separate. The visa application fee is a one-time US$40 charge; the SDF is a nightly fee (US$100 for most international adults) charged for every night of your stay. Both are included in your Marvels Luxe quote.</p></FaqItem>
+          <FaqItem q={"Can I enter and exit through different border points?"}><p>Yes — some travelers fly into Paro and depart overland through Phuentsholing, or the reverse, especially when combining Bhutan with a trip to India. Tell us if you'd like to plan it that way.</p></FaqItem>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta text={"Tell us your travel dates and we'll take care of the visa, the SDF and everything else — you just show up."} />
+</BaseLayout>

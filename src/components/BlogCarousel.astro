@@ -1,0 +1,40 @@
+---
+import BlogSlide from './BlogSlide.astro';
+---
+
+<section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16 blog" id="blog">
+    <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+      <div class="flex items-end justify-between gap-6 mb-14 max-[639px]:flex-col max-[639px]:items-start">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-155 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">BLOGS</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Notes on Bhutan</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Stories, festival dates and travel tips written by the guests who lived them.</p>
+        </div>
+        <div class="flex gap-3 shrink-0 max-[639px]:self-end">
+          <button class="w-11.5 h-11.5 rounded-none bg-transparent border border-charcoal-line flex items-center justify-center [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease] [&_svg]:w-4.5 [&_svg]:h-4.5 hover:bg-brand-yellow hover:border-brand-yellow disabled:opacity-[0.35] disabled:pointer-events-none blog-prev" aria-label="Previous articles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"></path></svg></button>
+          <button class="w-11.5 h-11.5 rounded-none bg-transparent border border-charcoal-line flex items-center justify-center [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease] [&_svg]:w-4.5 [&_svg]:h-4.5 hover:bg-brand-yellow hover:border-brand-yellow disabled:opacity-[0.35] disabled:pointer-events-none blog-next" aria-label="Next articles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"></path></svg></button>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden">
+        <div class="flex gap-5 cursor-grab select-none [will-change:transform] [transition:transform_0.6s_cubic-bezier(0.65,_0,_0.35,_1)] [&.dragging]:cursor-grabbing [&.dragging]:[transition:none] blog-track">
+          <BlogSlide image={"/images/thimphu-tshechu-by-bassem-nimah43.jpg"} alt={"Colourfully dressed performers lined up at Thimphu Tshechu"} date={"12 March 2026"} author={"Claire Whitfield"} title={"Inside a Paro Tsechu: What First-Time Visitors Should Know"} desc={"Where to stand, when to arrive, and how to read the masked dances without a program."} href={"#blog"} />
+
+          <BlogSlide image={"/images/2022-10-02-11.25.08.jpg"} alt={"Mountain stream running beside a traditional dzong in a forested valley"} date={"4 February 2026"} author={"Marcus Adeyemi"} title={"Packing for the Higher Himalaya: A Trekker's Checklist"} desc={"What our guides actually carry above 3,500 metres — and what's safe to leave behind."} href={"#blog"} />
+
+          <BlogSlide image={"/images/hot-stone-bath.jpg"} alt={"Traditional Bhutanese hot stone bath overlooking the valley"} date={"28 January 2026"} author={"Naomi Ishikawa"} title={"The Ritual of the Bhutanese Hot Stone Bath"} desc={"River stones, ash and artemisia — the quiet science behind a centuries-old tradition."} href={"#blog"} />
+
+          <BlogSlide image={"/images/baribrang-garden.jpg"} alt={"Misty mountain garden with a wooden footbridge"} date={"19 April 2026"} author={"Daniel Voss"} title={"Why Bhutan Caps Its Daily Visitors — And What It Means for You"} desc={"A short guide to the Sustainable Development Fee, and why it keeps the valleys quiet."} href={"#blog"} />
+
+          <BlogSlide image={"/images/lll06468.jpg"} alt={"Portrait of a woman in an intricately woven traditional dress and silver jewellery"} date={"7 May 2026"} author={"Priya Nandakumar"} title={"Bhutan's Textile Traditions: Reading a Kira and Gho"} desc={"How pattern, weave and colour still quietly signal region, occasion and rank."} href={"#blog"} />
+
+          <BlogSlide image={"/images/trashiyangtse-town.jpg"} alt={"Traditional village street in Trashiyangtse"} date={"22 June 2026"} author={"Tom Bellamy"} title={"A Morning in Trashiyangtse: Bhutan's Quietest Valley"} desc={"Wood-turners, a hilltop dzong and a valley most itineraries still skip."} href={"#blog"} />
+        </div>
+      </div>
+      <div class="flex justify-center gap-2 mt-9 [&_button]:w-2 [&_button]:h-2 [&_button]:rounded-[50%] [&_button]:bg-charcoal-line [&_button]:[transition:background_0.3s_ease,_transform_0.3s_ease] [&_button.active]:bg-brand-yellow! [&_button.active]:[transform:scale(1.3)] blog-dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+<script>
+  import '../scripts/blog-carousel.ts';
+</script>

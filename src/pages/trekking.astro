@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import TourCard from '../components/TourCard.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="Trekking | Marvels Luxe Bhutan"
+  description="Six private treks through Bhutan — from the classic Druk Path to the remote Merak-Sakteng highlands, each paced and planned by our Bhutan-based team."
+  ogImage="/images/2022-10-02-11.25.08.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/2022-10-02-11.25.08.jpg"} title={"Trekking"} />
+
+    <!-- ================================ TOUR CARDS ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="treks">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Choose Your Trekking Route</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">From gentle valley walks to high alpine passes, every route below is paced to how you actually want to move through the mountains.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-9 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-3 min-[1024px]:gap-8">
+
+          <TourCard image={"/images/about1.jpg"} alt={"A Bhutanese herder feeding his sheep in a highland valley"} title={"Druk Path Trek"} duration={"6 Days, 5 Nights"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} />
+
+          <TourCard imageClass="object-top" image={"/images/bridungla3.jpg"} alt={"Grazing horses with snow-capped Himalayan peaks in the distance"} title={"Jomolhari Base Camp Trek"} duration={"9 Days, 8 Nights"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"1"} />
+
+          <TourCard image={"/images/kurje-lhakhang.jpg"} alt={"Kurje Lhakhang temple beneath strings of prayer flags in Bumthang"} title={"Bumthang Cultural Trek"} duration={"4 Days, 3 Nights"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"2"} />
+
+          <TourCard image={"/images/baribrang-garden.jpg"} alt={"Misty mountain forest with a timber footbridge, prayer flags and a stone cairn"} title={"Dagala Thousand Lakes Trek"} duration={"7 Days, 6 Nights"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} />
+
+          <TourCard image={"/images/marcus-westberg-bumthang-202312.jpg"} alt={"Raptors circling the fortified walls of a hilltop dzong in Bumthang"} title={"Gangtey Nature Trail"} duration={"2 Days, 1 Night"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"1"} />
+
+          <TourCard image={"/images/zhemgang-bird-festival-2.jpg"} alt={"A woman in traditional dress carrying a handwoven bamboo basket at a highland market"} title={"Merak-Sakteng Trek"} duration={"8 Days, 7 Nights"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"2"} />
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta  />
+</BaseLayout>

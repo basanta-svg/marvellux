@@ -1,0 +1,20 @@
+---
+interface Props {
+  /** Root-relative background image. */
+  image: string;
+  /** Heading; may contain inline HTML. */
+  title: string;
+  /** Optional small line above the heading (e.g. "Cultural Journey · 6 Days"). */
+  eyebrow?: string;
+}
+const { image, title, eyebrow } = Astro.props;
+const bg = `linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.85) 100%), url('${image}')`;
+---
+
+<section class="relative min-h-[100vh] flex items-end justify-center overflow-hidden text-white bg-black [&_h1]:text-[34px] [&_h1]:text-white [&_h1]:max-w-170 [&_h1]:my-0 [&_h1]:mx-auto min-[768px]:[&_h1]:text-[48px]">
+  <div class="absolute inset-[-4%] bg-cover [background-position:center_32%] [animation:heroZoom_16s_ease-out_forwards]" style={`background-image:${bg}`}></div>
+  <div class="max-w-320 my-0 mx-auto relative z-2 w-full pt-40 pr-(--gutter) pb-25 pl-(--gutter) text-center max-[767px]:pt-30">
+    {eyebrow && <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow mb-3.5" set:html={eyebrow} />}
+    <h1 set:html={title} />
+  </div>
+</section>

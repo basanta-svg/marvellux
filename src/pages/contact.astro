@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import FaqItem from '../components/FaqItem.astro';
+---
+
+<BaseLayout
+  title="Contact Us | Marvels Luxe Bhutan"
+  description="Start planning your private Bhutan journey. Reach Marvels Luxe by phone, email or enquiry form — our Bhutan-based team replies within one business day."
+  ogImage="/images/2022-10-02-10.05.11.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/2022-10-02-10.05.11.jpg"} title={"Custom Bhutan Tours, Built Around You"} />
+
+    <!-- ============================ CUSTOM QUOTE FORM ============================ -->
+    <QuoteForm />
+
+    <!-- ============================ PREFER TO REACH US DIRECTLY ============================ -->
+    <section class="pt-0 pr-0 pb-30 pl-0 bg-soft-white max-[1023px]:pb-20 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <p class="text-[11.5px] font-semibold tracking-[0.12em] uppercase font-body text-brand-yellow-dark mb-7">PREFER TO REACH US DIRECTLY?</p>
+        <div class="grid grid-cols-1 gap-8 pt-7 border-t border-t-charcoal-line min-[640px]:grid-cols-2 min-[1024px]:grid-cols-4">
+          <div class="mb-10 last:mb-0 [&_h3]:text-[12px] [&_h3]:font-semibold [&_h3]:tracking-[0.12em] [&_h3]:uppercase [&_h3]:text-brand-yellow-dark [&_h3]:font-body">
+            <h3>Email</h3>
+            <div class="mt-4 flex flex-col gap-3 [&_a]:text-[15px] [&_a]:text-charcoal [&_span]:text-[15px]! [&_span]:text-charcoal [&_a]:[transition:color_0.3s_ease] [&_a:hover]:text-brand-yellow-dark!">
+              <a href="mailto:journeys@marvelsluxe.bt">journeys@marvelsluxe.bt</a>
+            </div>
+          </div>
+          <div class="mb-10 last:mb-0 [&_h3]:text-[12px] [&_h3]:font-semibold [&_h3]:tracking-[0.12em] [&_h3]:uppercase [&_h3]:text-brand-yellow-dark [&_h3]:font-body">
+            <h3>Phone</h3>
+            <div class="mt-4 flex flex-col gap-3 [&_a]:text-[15px] [&_a]:text-charcoal [&_span]:text-[15px]! [&_span]:text-charcoal [&_a]:[transition:color_0.3s_ease] [&_a:hover]:text-brand-yellow-dark!">
+              <a href="tel:+97523359180">+975 2 335 918</a>
+            </div>
+          </div>
+          <div class="mb-10 last:mb-0 [&_h3]:text-[12px] [&_h3]:font-semibold [&_h3]:tracking-[0.12em] [&_h3]:uppercase [&_h3]:text-brand-yellow-dark [&_h3]:font-body">
+            <h3>Office</h3>
+            <div class="mt-4 flex flex-col gap-3 [&_a]:text-[15px] [&_a]:text-charcoal [&_span]:text-[15px]! [&_span]:text-charcoal [&_a]:[transition:color_0.3s_ease] [&_a:hover]:text-brand-yellow-dark!">
+              <span>Chang Lam, Thimphu, Bhutan</span>
+              <span>By appointment — most conversations happen by call or video</span>
+            </div>
+          </div>
+          <div class="mb-10 last:mb-0 [&_h3]:text-[12px] [&_h3]:font-semibold [&_h3]:tracking-[0.12em] [&_h3]:uppercase [&_h3]:text-brand-yellow-dark [&_h3]:font-body">
+            <h3>Follow</h3>
+            <div class="flex gap-2.5 mt-4 [&_a]:w-9.5 [&_a]:h-9.5 [&_a]:rounded-[50%] [&_a]:border [&_a]:border-charcoal-line [&_a]:flex [&_a]:items-center [&_a]:justify-center [&_a]:text-charcoal [&_a]:[transition:background_0.3s_ease,_border-color_0.3s_ease,_color_0.3s_ease] [&_a_svg]:w-3.75! [&_a_svg]:h-3.75! [&_a:hover]:bg-brand-yellow [&_a:hover]:border-brand-yellow! [&_a:hover]:text-charcoal!">
+              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+              <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h-2a2 2 0 00-2 2v10M8 13h5"></path><path d="M13 21V8a2 2 0 012-2h2"></path></svg></a>
+              <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="3"></rect><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"></path></svg></a>
+              <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 01-8.9 8.4 8.5 8.5 0 01-4.1-1.1L3 20l1.2-4.9A8.4 8.4 0 1121 11.5z"></path></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================== FAQ TEASER ==================================== -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="faq-teaser">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 reveal">
+          <div>
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">BEFORE YOU WRITE IN</p>
+            <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Common Questions</h2>
+          </div>
+          <a href="/faq.html" class="inline-flex items-center gap-2 font-semibold text-[13px] tracking-[0.06em] uppercase text-charcoal border-b border-b-charcoal pb-0.75 [transition:color_0.3s_ease,_border-color_0.3s_ease,_gap_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark hover:gap-3">View All FAQs
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+          <FaqItem q={"Do I need a visa to visit Bhutan?"} open><p>Yes, and Marvels Luxe handles the full application for you once your itinerary is confirmed. Your visa clearance is issued before departure and stamped into your passport on arrival — there is nothing to arrange separately.</p></FaqItem>
+          <FaqItem q={"Is the Sustainable Development Fee included?"}><p>Yes. Bhutan's daily Sustainable Development Fee is built into every itinerary we quote, alongside your guide, driver, accommodation and meals — the figure you see is what you pay.</p></FaqItem>
+          <FaqItem q={"How soon will I hear back after I enquire?"}><p>Within one business day. From there we shape a draft itinerary around your dates, pace and interests before anything is booked.</p></FaqItem>
+        </div>
+      </div>
+    </section>
+</BaseLayout>

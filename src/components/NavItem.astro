@@ -1,0 +1,31 @@
+---
+import type { NavGroup } from '../data/nav';
+interface Props {
+  group: NavGroup;
+}
+const { group } = Astro.props;
+---
+
+<div class="min-[1024px]:relative nav-item">
+  {
+    group.children ? (
+      <>
+        <button class="min-[1024px]:flex min-[1024px]:items-center min-[1024px]:gap-1.25 min-[1024px]:py-2.5 min-[1024px]:px-3.5 min-[1024px]:text-[11px] min-[1024px]:font-medium min-[1024px]:tracking-[0.03em] min-[1024px]:uppercase min-[1024px]:text-soft-white min-[1024px]:[transition:color_0.3s_ease] min-[1024px]:relative min-[1024px]:after:content-[''] min-[1024px]:after:absolute min-[1024px]:after:left-3.5 min-[1024px]:after:right-3.5 min-[1024px]:after:bottom-1 min-[1024px]:after:h-0.25 min-[1024px]:after:bg-current min-[1024px]:after:[transform:scaleX(0)] min-[1024px]:after:[transform-origin:left] min-[1024px]:after:[transition:transform_0.3s_ease] min-[1024px]:[.site-header.scrolled_&]:text-charcoal min-[1024px]:hover:text-brand-yellow min-[1024px]:[.nav-item.open_&]:text-brand-yellow! min-[1024px]:[&:hover::after]:[transform:scaleX(1)] min-[1024px]:[.nav-item.open_&::after]:[transform:scaleX(1)]! nav-link" aria-expanded="false">
+          {group.label}
+          <svg class="min-[1024px]:w-2.25 min-[1024px]:h-2.25 min-[1024px]:[transition:transform_0.3s_ease] min-[1024px]:[.nav-item.open_&]:[transform:rotate(180deg)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+        <div class="min-[1024px]:absolute min-[1024px]:top-[calc(100%_+_10px)] min-[1024px]:left-0 min-[1024px]:min-w-57.5 min-[1024px]:bg-transparent min-[1024px]:rounded-none min-[1024px]:shadow-none min-[1024px]:py-2.5 min-[1024px]:px-1 min-[1024px]:opacity-[0] min-[1024px]:invisible min-[1024px]:[transform:translateY(8px)] min-[1024px]:[transition:opacity_0.3s_ease,_transform_0.3s_ease,_visibility_0.3s_ease,_background_0.3s_ease,_box-shadow_0.3s_ease] min-[1024px]:[.nav-item.open_&]:opacity-[1] min-[1024px]:[.nav-item.open_&]:visible min-[1024px]:[.nav-item.open_&]:[transform:translateY(0)] min-[1024px]:[&_a]:block min-[1024px]:[&_a]:py-2.5 min-[1024px]:[&_a]:px-3.5 min-[1024px]:[&_a]:rounded-sm min-[1024px]:[&_a]:text-[12px] min-[1024px]:[&_a]:text-soft-white min-[1024px]:[&_a]:[text-shadow:0_1px_4px_rgba(0,0,0,0.45)] min-[1024px]:[&_a]:[transition:background_0.3s_ease,_color_0.3s_ease,_padding-left_0.3s_ease] min-[1024px]:[&_a:hover]:bg-[rgba(255,255,255,0.12)] min-[1024px]:[&_a:hover]:text-brand-yellow min-[1024px]:[&_a:hover]:pl-4.5 min-[1024px]:[.site-header.scrolled_&]:bg-soft-white min-[1024px]:[.site-header.scrolled_&]:rounded-md! min-[1024px]:[.site-header.scrolled_&]:shadow-[0_20px_48px_rgba(30,30,30,0.16)] min-[1024px]:[.site-header.scrolled_&]:p-2.5! min-[1024px]:[.site-header.scrolled_&_a]:text-charcoal min-[1024px]:[.site-header.scrolled_&_a]:[text-shadow:none]! min-[1024px]:[.site-header.scrolled_&_a:hover]:bg-[rgba(249,166,26,0.1)]! min-[1024px]:[.site-header.scrolled_&_a:hover]:text-brand-yellow-dark! dropdown">
+          {group.children.map((c) => (
+            <a href={c.href}>{c.label}</a>
+          ))}
+        </div>
+      </>
+    ) : (
+      <a class="min-[1024px]:flex min-[1024px]:items-center min-[1024px]:gap-1.25 min-[1024px]:py-2.5 min-[1024px]:px-3.5 min-[1024px]:text-[11px] min-[1024px]:font-medium min-[1024px]:tracking-[0.03em] min-[1024px]:uppercase min-[1024px]:text-soft-white min-[1024px]:[transition:color_0.3s_ease] min-[1024px]:relative min-[1024px]:after:content-[''] min-[1024px]:after:absolute min-[1024px]:after:left-3.5 min-[1024px]:after:right-3.5 min-[1024px]:after:bottom-1 min-[1024px]:after:h-0.25 min-[1024px]:after:bg-current min-[1024px]:after:[transform:scaleX(0)] min-[1024px]:after:[transform-origin:left] min-[1024px]:after:[transition:transform_0.3s_ease] min-[1024px]:[.site-header.scrolled_&]:text-charcoal min-[1024px]:hover:text-brand-yellow min-[1024px]:[.nav-item.open_&]:text-brand-yellow! min-[1024px]:[&:hover::after]:[transform:scaleX(1)] min-[1024px]:[.nav-item.open_&::after]:[transform:scaleX(1)]! nav-link" href={group.href}>
+        {group.label}
+      </a>
+    )
+  }
+</div>

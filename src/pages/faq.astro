@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqItem from '../components/FaqItem.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="FAQs | Marvels Luxe Bhutan"
+  description="Answers to common questions about visiting Bhutan with Marvels Luxe — visas and fees, planning your trip, what's included, practical and health advice, and how we work."
+  ogImage="/images/kurje-lhakhang.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/kurje-lhakhang.jpg"} title={"Frequently Asked Questions"} />
+
+    <!-- ================================ FAQ INTRO ================================ -->
+    <section class="pt-30 pr-0 pb-0 pl-0 bg-soft-white max-[1023px]:pt-20 max-[767px]:pt-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">EVERYTHING IN ONE PLACE</p>
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Questions, Answered</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Grouped by topic. For visa specifics see our <a href="/visa-entry.html" class="text-charcoal font-semibold border-b border-b-charcoal [transition:color_0.3s_ease,_border-color_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark">Visa &amp; Entry guide</a>, and for planning basics see the <a href="/bhutan-travel-guide.html" class="text-charcoal font-semibold border-b border-b-charcoal [transition:color_0.3s_ease,_border-color_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark">Bhutan Travel Guide</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ VISA, ENTRY & FEES ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="visa-fees">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 reveal">
+          <div>
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">CATEGORY</p>
+            <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Visa, Entry &amp; Fees</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+          <FaqItem q={"Do I need a visa to visit Bhutan?"} open><p>Yes, unless you hold an Indian, Bangladeshi or Maldivian passport. Marvels Luxe handles the full application for you once your itinerary is confirmed — your clearance is issued before departure and stamped into your passport on arrival.</p></FaqItem>
+          <FaqItem q={"Is the Sustainable Development Fee included?"}><p>Yes. Bhutan's nightly Sustainable Development Fee (US$100 per adult for most international visitors) is built into every itinerary we quote, alongside your guide, driver, accommodation and meals — the figure you see is what you pay.</p></FaqItem>
+          <FaqItem q={"How long does visa processing take?"}><p>Around five working days once your application is submitted. We recommend confirming your itinerary at least a few weeks ahead of travel to leave a comfortable margin.</p></FaqItem>
+          <FaqItem q={"Do Indian nationals need a visa?"}><p>No — Indian nationals travel on a permit rather than a visa, and can apply online in advance or on arrival. Bangladeshi and Maldivian nationals follow a similarly simplified process. Full details are on our <a href="/visa-entry.html">Visa &amp; Entry</a> page.</p></FaqItem>
+          <FaqItem q={"Can I enter by land instead of flying into Paro?"}><p>Yes. Phuentsholing, on the Bhutan-India border, is open to international travelers as well as Indian nationals. It's the only land crossing available to non-Indian visitors.</p></FaqItem>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ PLANNING YOUR TRIP ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 reveal">
+          <div>
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">CATEGORY</p>
+            <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Planning Your Trip</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+          <FaqItem q={"What is the best time of year to visit?"}><p>Spring (March–May) and autumn (September–November) bring the clearest Himalayan views and most of the major tsechus. Winter offers crisp light and near-empty dzongs; summer suits travelers drawn to lush valleys and fewer visitors.</p></FaqItem>
+          <FaqItem q={"How far in advance should I book?"}><p>We can turn an itinerary around quickly, but booking two to three months ahead gives the most room for hotel availability and visa processing — especially in the popular spring and autumn seasons or around a specific festival.</p></FaqItem>
+          <FaqItem q={"How physically demanding are the treks?"}><p>We grade every trek from gentle valley walks to multi-day high-altitude routes, and pace each itinerary to your fitness and prior experience. Tell us how you like to move and we'll match the route to you, not the other way round.</p></FaqItem>
+          <FaqItem q={"Can journeys be tailored for a private group or family?"}><p>Every Marvels Luxe departure is private — it is just your group, your guide and your vehicle. Itineraries can be shaped around multigenerational families, honeymoons, small groups of friends, or a solo traveler.</p></FaqItem>
+          <FaqItem q={"Can I time my trip to a specific festival?"}><p>Yes — tsechu dates follow Bhutan's lunar calendar and shift every year. Tell us the festival you'd like to see and the dates you can travel, and we'll confirm the calendar and build the itinerary around it.</p></FaqItem>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ WHAT'S INCLUDED ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 reveal">
+          <div>
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">CATEGORY</p>
+            <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">What's Included</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+          <FaqItem q={"What is included in a Marvels Luxe itinerary?"}><p>Private guide and driver, all accommodation, meals as specified, internal transfers, park and monument fees, and the Sustainable Development Fee. International flights and personal spending are the only additions.</p></FaqItem>
+          <FaqItem q={"Are international flights included?"}><p>No — you book your own flights to and from Paro (or your overland arrival). We're glad to advise on routing and timing once your itinerary is set.</p></FaqItem>
+          <FaqItem q={"Is tipping expected?"}><p>Tipping isn't mandatory but is customary and appreciated for guides, drivers and hotel staff. We're happy to advise on typical amounts before you travel.</p></FaqItem>
+          <FaqItem q={"What's your cancellation policy?"}><p>Terms depend on how close to departure a cancellation falls, since hotels, guides and permits are booked on your behalf in advance. We'll walk you through the specifics when we confirm your itinerary.</p></FaqItem>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ PRACTICAL & HEALTH ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 reveal">
+          <div>
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">CATEGORY</p>
+            <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Practical &amp; Health</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+          <FaqItem q={"Will altitude be a problem?"}><p>Paro and Thimphu sit around 2,200–2,300 metres, and mountain passes reach higher still. Most travelers adjust within a day or two; we pace itineraries sensibly and recommend discussing travel health and insurance with your doctor beforehand.</p></FaqItem>
+          <FaqItem q={"What currency should I bring?"}><p>The Ngultrum (BTN) is pegged 1:1 to the Indian Rupee. US Dollars and other major currencies exchange easily in Thimphu and Paro; carry cash for rural areas where ATMs and cards are limited.</p></FaqItem>
+          <FaqItem q={"Will I have phone signal and WiFi?"}><p>Local SIM cards are available on arrival, and WiFi is common in hotels in Thimphu and Paro. Signal is patchy in remote valleys and over high passes — worth expecting some quiet stretches.</p></FaqItem>
+          <FaqItem q={"What should I wear to visit a dzong or temple?"}><p>Modest clothing that covers shoulders and knees, with hats and sunglasses removed before entering. Our full <a href="/bhutan-travel-guide.html#when-to-go">Travel Guide</a> covers etiquette in more detail.</p></FaqItem>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ TRAVELING WITH US ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 reveal">
+          <div>
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">CATEGORY</p>
+            <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Traveling With Marvels Luxe</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+          <FaqItem q={"Is Marvels Luxe a licensed Bhutanese operator?"}><p>Yes — visa applications for international tourists must be lodged by a licensed local operator, and that's exactly what we are, based in Thimphu.</p></FaqItem>
+          <FaqItem q={"How do I start planning?"}><p>Reach out through our <a href="/contact.html">contact page</a> with a sense of your dates and interests. We'll shape a draft itinerary around them before anything is booked.</p></FaqItem>
+          <FaqItem q={"Can you combine cultural touring with trekking or a festival?"}><p>Yes — most of our journeys mix and match freely. Browse <a href="/cultural-journeys.html">Cultural Journeys</a>, <a href="/trekking.html">Trekking</a>, and <a href="/festivals.html">Festivals</a> for a sense of what's possible, then tell us what you'd like to combine.</p></FaqItem>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta title={"Still Have a Question?"} text={"Tell us where you're stuck and we'll answer directly — or just start the conversation about your trip."} />
+</BaseLayout>

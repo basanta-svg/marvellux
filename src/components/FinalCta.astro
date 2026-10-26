@@ -1,0 +1,35 @@
+---
+interface Props {
+  image?: string;
+  alt?: string;
+  title?: string;
+  text?: string;
+  href?: string;
+  label?: string;
+}
+const {
+  image = '/images/final-cta.jpg',
+  alt = 'Two young monks laughing and playing outside a painted monastery wall',
+  title = 'Begin Your Journey',
+  text = "Every Marvels Luxe itinerary starts with a conversation. Tell us how you picture Bhutan, and we'll shape a private journey around it, from the first morning to the last.",
+  href = '/contact.html',
+  label = 'Contact Us',
+} = Astro.props;
+---
+
+<section class="flex flex-col bg-soft-white min-[900px]:flex-row min-[900px]:min-h-[82vh]">
+  <div class="relative h-105 min-[900px]:flex-[0_0_48%] min-[900px]:h-auto [&_img]:absolute [&_img]:inset-0 [&_img]:w-full [&_img]:h-full [&_img]:object-cover">
+    <img src={image} alt={alt} loading="lazy" />
+  </div>
+  <div class="relative flex-1 flex items-center overflow-hidden py-14 px-(--gutter) min-[900px]:py-15 min-[900px]:px-20">
+    <div class="absolute -right-17.5 -bottom-17.5 w-90 h-90 bg-[url('/images/pattern.png')] bg-contain bg-no-repeat opacity-[0.06] pointer-events-none" aria-hidden="true"></div>
+    <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] relative z-1 max-w-115 [&_h2]:text-[32px] min-[768px]:[&_h2]:text-[42px] [&_p]:mt-4.5 [&_p]:text-[15px]! [&_p]:text-[#55534f] final-cta-text reveal">
+      <h2 set:html={title} />
+      <p set:html={text} />
+      <a href={href} class="inline-flex items-center gap-2.5 font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease,_transform_0.3s_ease] whitespace-nowrap active:[transform:scale(0.97)] bg-charcoal text-soft-white border border-charcoal hover:bg-brand-yellow hover:border-brand-yellow hover:text-charcoal [.about-us-text_&]:mt-7 [.final-cta-text_&]:mt-7 [.festival-dates-cta-buttons_&_svg]:shrink-0! max-[640px]:[.festival-dates-cta-buttons_&]:flex-[1_1_auto] max-[640px]:[.festival-dates-cta-buttons_&]:justify-center [.itinerary-lede_&]:mt-7!">
+        {label}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>

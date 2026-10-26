@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import TourCard from '../components/TourCard.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="Festivals | Marvels Luxe Bhutan"
+  description="Time your journey to a living Bhutanese festival. Six tsechus and celebrations across the kingdom, each paired with a private itinerary built around it."
+  ogImage="/images/dechenphu-festival5.jpg"
+>
+  <!-- ================================ PAGE HERO ================================ -->
+    <PageHero image={"/images/dechenphu-festival5.jpg"} title={"Festivals"} />
+
+    <!-- ================================ TOUR CARDS ================================ -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="festivals-list">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] max-w-170 mb-14 reveal">
+          <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Choose Your Festival</h2>
+          <p class="font-body text-[16px] text-[#55534f] max-w-140 mt-4">Every major tsechu runs on its own lunar calendar. Tell us the dates you can travel and we’ll match a festival, and a private itinerary, around them.</p>
+        </div>
+
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex flex-wrap items-center justify-between gap-6 mb-14 py-7 px-8 bg-white border border-charcoal-line border-l-4 border-l-brand-yellow reveal">
+          <div class="[&_h3]:text-[19px] [&_p]:mt-2 [&_p]:text-[14px]! [&_p]:leading-[1.6] [&_p]:text-[#55534f] [&_p]:max-w-130">
+            <h3>Planning Around a Festival?</h3>
+            <p>Tsechu dates follow Bhutan's lunar calendar, so they shift every year and are only confirmed a few months ahead. View the official tentative festival calendar, published annually by the Association of Bhutanese Tour Operators and Bhutan's Department of Tourism, for the year you're planning to travel.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0 max-[640px]:w-full festival-dates-cta-buttons">
+            <a href="/docs/tentative_festival_dates_2026.pdf" target="_blank" rel="noopener" class="inline-flex items-center font-body font-semibold tracking-[0.06em] uppercase rounded-pill [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease,_transform_0.3s_ease] whitespace-nowrap active:[transform:scale(0.97)] bg-transparent text-charcoal border border-charcoal hover:bg-charcoal hover:text-soft-white py-2.5 px-5 text-[11px] gap-2 [.festival-dates-cta-buttons_&_svg]:shrink-0! max-[640px]:[.festival-dates-cta-buttons_&]:flex-[1_1_auto] max-[640px]:[.festival-dates-cta-buttons_&]:justify-center">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path></svg>
+              2026 Festival Dates (PDF)
+            </a>
+            <a href="/docs/tentative_festival_dates_2027-1.pdf" target="_blank" rel="noopener" class="inline-flex items-center font-body font-semibold tracking-[0.06em] uppercase rounded-pill [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease,_transform_0.3s_ease] whitespace-nowrap active:[transform:scale(0.97)] bg-transparent text-charcoal border border-charcoal hover:bg-charcoal hover:text-soft-white py-2.5 px-5 text-[11px] gap-2 [.festival-dates-cta-buttons_&_svg]:shrink-0! max-[640px]:[.festival-dates-cta-buttons_&]:flex-[1_1_auto] max-[640px]:[.festival-dates-cta-buttons_&]:justify-center">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path></svg>
+              2027 Festival Dates (PDF)
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-9 min-[640px]:grid-cols-2 min-[1024px]:grid-cols-3 min-[1024px]:gap-8">
+
+          <TourCard image={"/images/thimphu-tshechu-by-bassem-nimah43.jpg"} alt={"Dancers in traditional Bhutanese dress at Thimphu Tshechu"} title={"Thimphu Tshechu"} duration={"Autumn, 3 Days"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} />
+
+          <TourCard image={"/images/trongsatsechu1.jpg"} alt={"Masked dancers in a circle formation at a Bhutanese tsechu"} title={"Paro Tshechu"} duration={"Spring, 5 Days"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"1"} />
+
+          <TourCard image={"/images/lll05267.jpg"} alt={"Masked dancers in a circle formation at a Bhutanese tsechu"} title={"Punakha Drubchen &amp; Tshechu"} duration={"Winter/Spring, 5 Days"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"2"} />
+
+          <TourCard image={"/images/haa-summer-festival5.jpeg"} alt={"Masked festival dancers with drums performing on a grass field below forested mountains"} title={"Jambay Lhakhang Drup"} duration={"Autumn/Winter, 5 Days"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} />
+
+          <TourCard image={"/images/gasa-festivals-header.jpg"} alt={"Riders on horseback racing across a highland field with snow-capped mountains behind"} title={"Haa Summer Festival"} duration={"Summer, 2 Days"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"1"} />
+
+          <TourCard image={"/images/marcus-westberg-bumthang-202325.jpg"} alt={"A mother and child at a roadside stall in the Bumthang highlands"} title={"Black-Necked Crane Festival"} duration={"November, 1 Day"} group={"Private Journey"} href={"/contact.html"} cta={"Enquire Now"} delay={"2"} />
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta  />
+</BaseLayout>

@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import ExperienceGrid from '../components/ExperienceGrid.astro';
+import JourneysCarousel from '../components/JourneysCarousel.astro';
+import BlogCarousel from '../components/BlogCarousel.astro';
+import BhutanMap from '../components/BhutanMap.astro';
+import FaqItem from '../components/FaqItem.astro';
+import FinalCta from '../components/FinalCta.astro';
+---
+
+<BaseLayout
+  title="Marvels Luxe Bhutan"
+  description="Marvels Luxe — luxury, personalized travel journeys through Bhutan. Cultural immersion, Himalayan trekking, wellness and heritage stays, curated by a Bhutan-based team."
+  ogImage="/images/2022-10-02-08.15.34.jpg"
+>
+  <!-- ================================ HERO SLIDER ================================ -->
+    <HeroSlider />
+
+    <!-- ================================ EXPERIENCES ================================ -->
+    <ExperienceGrid />
+
+    <!-- ================================ ABOUT US ================================ -->
+    <section class="py-30 px-0 bg-soft-white overflow-hidden max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="about">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter) grid grid-cols-1 gap-16 items-center min-[960px]:grid-cols-[1fr_1fr] min-[960px]:gap-12 about-us-grid">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] [&_h2]:text-[36px] min-[768px]:[&_h2]:text-[46px] [&_p]:text-[#55534f] [&_p]:text-[15px]! [&_p]:max-w-115 [&_p]:mt-4.5 about-us-text reveal">
+          <h2>About Us</h2>
+          <p>At Marvels Luxe, we believe travel is more than reaching a destination — it's about the moments you collect along the way. Whether you're seeking adventure, stillness, or cultural immersion, we design journeys around what truly matters to you.</p>
+          <p>With a Bhutan-based team, trusted local partners, and a genuine passion for these valleys, we make travel effortless, personal, and unforgettable.</p>
+          <a href="/about.html" class="inline-flex items-center gap-2.5 font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease,_transform_0.3s_ease] whitespace-nowrap active:[transform:scale(0.97)] bg-brand-yellow text-charcoal border border-brand-yellow hover:bg-brand-yellow-dark hover:border-brand-yellow-dark [.about-us-text_&]:mt-7">More about</a>
+        </div>
+        <div class="relative max-w-115 my-0 mx-auto min-[640px]:max-w-120">
+          <div class="relative rounded-none overflow-hidden shadow-[0_24px_48px_rgba(30,30,30,0.16)] bg-soft-white [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:block w-full aspect-[4/5]">
+            <img src="/images/about1.jpg" alt="A Bhutanese herder feeding his sheep in a highland valley">
+          </div>
+          <span class="absolute left-1/2 bottom-0 [transform:translate(-50%,_50%)] z-3 w-21 h-21 rounded-none bg-transparent flex items-center justify-center p-3.5 [&_img]:w-full [&_img]:h-full [&_img]:object-contain [&_img]:[animation:aboutBadgeSpin_14s_linear_infinite]" aria-hidden="true">
+            <img src="/images/site-icon.png" alt="">
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ JOURNEYS CAROUSEL ============================ -->
+    <JourneysCarousel />
+
+    <!-- ================================== BLOG ================================== -->
+    <BlogCarousel />
+
+    <!-- ============================ BHUTAN MAP ============================ -->
+    <BhutanMap />
+
+    <!-- Tooltip lives outside the map so fixed positioning works everywhere -->
+  
+
+    <!-- ==================================== FAQ ==================================== -->
+    <section class="py-30 px-0 bg-soft-white max-[1023px]:pt-20 max-[1023px]:pb-20 max-[767px]:pt-16 max-[767px]:pb-16" id="faq">
+      <div class="max-w-320 my-0 mx-auto py-0 px-(--gutter)">
+        <div class="opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] flex items-end justify-between gap-6 mb-12 max-[767px]:flex-col max-[767px]:items-start max-[767px]:gap-3.5 reveal">
+          <div>
+            <p class="font-body font-semibold text-[12px] tracking-[0.18em] uppercase text-brand-yellow [&.on-light]:text-brand-yellow-dark on-light">QUESTIONS</p>
+            <h2 class="text-[length:clamp(30px,_4vw,_44px)] mt-3.5">Frequently Asked Questions</h2>
+          </div>
+          <a href="/faq.html" class="inline-flex items-center gap-2 font-semibold text-[13px] tracking-[0.06em] uppercase text-charcoal border-b border-b-charcoal pb-0.75 [transition:color_0.3s_ease,_border-color_0.3s_ease,_gap_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark hover:gap-3">View All
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-y-0 gap-x-10 min-[860px]:grid-cols-[1fr_1fr]">
+          <FaqItem q={"Do I need a visa to visit Bhutan?"} open><p>Yes, and Marvels Luxe handles the full application for you once your itinerary is confirmed. Your visa clearance is issued before departure and stamped into your passport on arrival — there is nothing to arrange separately.</p></FaqItem>
+          <FaqItem q={"Is the Sustainable Development Fee included?"}><p>Yes. Bhutan's daily Sustainable Development Fee is built into every itinerary we quote, alongside your guide, driver, accommodation and meals — the figure you see is what you pay.</p></FaqItem>
+          <FaqItem q={"What is the best time of year to visit?"}><p>Spring (March–May) and autumn (September–November) bring the clearest Himalayan views and most of the major tsechus. Winter offers crisp light and near-empty dzongs; summer suits travelers drawn to lush valleys and fewer visitors.</p></FaqItem>
+          <FaqItem q={"How physically demanding are the treks?"}><p>We grade every trek from gentle valley walks to multi-day high-altitude routes, and pace each itinerary to your fitness and prior experience. Tell us how you like to move and we'll match the route to you, not the other way round.</p></FaqItem>
+          <FaqItem q={"Can journeys be tailored for a private group or family?"}><p>Every Marvels Luxe departure is private — it is just your group, your guide and your vehicle. Itineraries can be shaped around multigenerational families, honeymoons, small groups of friends, or a solo traveler.</p></FaqItem>
+          <FaqItem q={"What is included in a Marvels Luxe itinerary?"}><p>Private guide and driver, all accommodation, meals as specified, internal transfers, park and monument fees, and the Sustainable Development Fee. International flights and personal spending are the only additions.</p></FaqItem>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FINAL CTA ================================ -->
+    <FinalCta href={"mailto:journeys@marvelsluxe.bt"} />
+</BaseLayout>

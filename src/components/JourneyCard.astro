@@ -1,0 +1,38 @@
+---
+interface Props {
+  image: string;
+  alt: string;
+  badge: string;
+  date: string;
+  group: string;
+  title: string;
+  duration: string;
+  href: string;
+}
+const { image, alt, badge, date, group, title, duration, href } = Astro.props;
+---
+
+<article class="flex-[0_0_84%] rounded-none overflow-hidden min-[960px]:flex-[0_0_calc(50%_-_12px)] min-[1024px]:flex-[0_0_calc(50%_-_12px)] min-[1400px]:flex-[0_0_calc(33.333%_-_16px)] max-[959px]:flex-[0_0_88%] max-[480px]:flex-[0_0_92%] journey-card">
+  <div class="relative overflow-hidden h-100 [&_img]:w-full [&_img]:h-full [&_img]:object-cover after:content-[''] after:absolute after:inset-0 after:[background:linear-gradient(180deg,_rgba(0,0,0,0)_55%,_rgba(0,0,0,0.72)_100%)] max-[959px]:h-80 max-[480px]:h-65">
+    <img src={image} alt={alt} />
+    <span class="absolute left-4 top-4 z-2 bg-brand-yellow text-charcoal text-[10.5px] font-semibold tracking-[0.1em] uppercase py-1.5 px-3">{badge}</span>
+    <div class="absolute left-0 right-0 bottom-0 z-2 flex justify-between py-4 px-5 text-soft-white">
+      <div class="journey-info-col">
+        <span class="block text-[10px] tracking-[0.1em] uppercase text-brand-yellow">Trip Date</span>
+        <strong class="block text-[14px] font-semibold mt-1">{date}</strong>
+      </div>
+      <div class="text-right journey-info-col">
+        <span class="block text-[10px] tracking-[0.1em] uppercase text-brand-yellow">Max Group Size</span>
+        <strong class="block text-[14px] font-semibold mt-1">{group}</strong>
+      </div>
+    </div>
+  </div>
+  <div class="bg-soft-white p-6 [&_h3]:text-[21px] max-[480px]:p-4.5 max-[480px]:[&_h3]:text-[18px]">
+    <h3 set:html={title} />
+    <p class="text-[12.5px] tracking-[0.03em] uppercase text-[#6b6864] mt-2">{duration}</p>
+    <a href={href} class="inline-flex items-center gap-2 mt-4.5 text-[12px] font-semibold tracking-[0.04em] uppercase text-charcoal border-b border-b-charcoal pb-0.75 [transition:color_0.3s_ease,_border-color_0.3s_ease,_gap_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark hover:gap-3">
+      View Journey
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    </a>
+  </div>
+</article>
