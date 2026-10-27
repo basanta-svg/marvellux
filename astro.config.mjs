@@ -44,5 +44,23 @@ export default defineConfig({
   // Emit about.html, faq.html, … so every original URL keeps working.
   build: { format: 'file' },
   integrations: [prefixRootPaths()],
-  vite: { plugins: [tailwindcss()] },
+  vite: {
+    plugins: [
+      tailwindcss(),
+      {
+        // Dev only: Astro serves public/ under the base, but the templates use
+        // root-absolute /images/… paths. Prefix them in source before compiling.
+        name: 'dev-prefix-root-assets',
+        apply: 'serve',
+        enforce: 'pre',
+        transform(code, id) {
+          if (id.includes('node_modules') || !/\/src\/.*\.(astro|css|js|ts)(\?|$)/.test(id.replaceAll('\\', '/'))) return;
+          const out = code
+            .replace(/(["'`(])\/(?=(?:images\/|docs\/|favicon|[a-z0-9-]+\.html|#))/g, `$1${BASE}/`)
+            .replace(/\bhref(=|:\s*)(["'])\/\2/g, `href$1$2${BASE}/$2`);
+          return out === code ? undefined : { code: out, map: null };
+        },
+      },
+    ],
+  },
 });

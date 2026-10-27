@@ -9,10 +9,10 @@ const section = 'py-30 px-0 max-[1023px]:py-20 max-[767px]:py-16';
 const wrap = 'max-w-320 my-0 mx-auto py-0 px-(--gutter)';
 const h2 = 'text-[length:clamp(32px,_4.4vw,_54px)] leading-[1.1] mt-3.5';
 
-const blockH2 = 'font-heading font-semibold text-[22px] tracking-[0.02em] uppercase mb-4.5';
+const blockH2 = 'font-heading font-semibold text-[20px] tracking-[0.02em] uppercase mb-4.5';
 const bodyP = 'text-[16px] leading-[1.85] text-[#55534f]';
-const fieldLabel = 'flex flex-col gap-2 text-[12px] font-semibold tracking-[0.08em] uppercase text-[rgba(250,250,248,0.75)]';
-const fieldInput = 'w-full bg-transparent border border-[rgba(250,250,248,0.3)] py-3 px-4 text-[15px] normal-case tracking-normal font-normal text-soft-white placeholder:text-[rgba(250,250,248,0.4)] focus:outline-none focus:border-brand-yellow';
+const fieldLabel = 'flex flex-col gap-2 text-[12px] font-semibold tracking-[0.08em] uppercase text-charcoal';
+const fieldInput = 'w-full bg-white border border-charcoal-line py-3 px-4 text-[14px] normal-case tracking-normal font-normal text-charcoal placeholder:text-[#55534f]/60 focus:outline-none focus:border-brand-yellow';
 const facts = [
   ['Destinations', 'Paro, Thimphu, Punakha', '<path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle>'],
   ['Best Season', 'March to May and September to November', '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path>'],
@@ -98,8 +98,8 @@ const notes = [
     <div class="absolute inset-[-4%] bg-cover [background-position:center_32%] [animation:heroZoom_16s_ease-out_forwards]" style="background-image:linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0.85) 100%), url('/images/jakar-dzong-1.jpg')"></div>
     <div class={`relative z-2 w-full ${wrap} pt-40 pb-25 max-[767px]:pt-30 max-[767px]:pb-16`}>
       <span class="inline-block mb-4.5 py-1.75 px-3.75 border border-[rgba(255,255,255,0.5)] text-[12px] font-semibold tracking-[0.12em] uppercase">6 Days / 5 Nights</span>
-      <h1 class="text-white text-[34px] min-[768px]:text-[52px] max-w-180">Dzongs of the Western Valleys</h1>
-      <p class="mt-5 max-w-140 text-[16px] min-[768px]:text-[18px] leading-[1.75] text-[rgba(255,255,255,0.85)]">A private journey through Paro, Thimphu and Punakha — the fortress-monasteries still at the heart of Bhutanese religious and civil life.</p>
+      <h1 class="text-white text-[32px] min-[768px]:text-[44px] max-w-180">Dzongs of the Western Valleys</h1>
+      <p class="mt-5 max-w-140 text-[16px] min-[768px]:text-[16px] leading-[1.75] text-[rgba(255,255,255,0.85)]">A private journey through Paro, Thimphu and Punakha — the fortress-monasteries still at the heart of Bhutanese religious and civil life.</p>
     </div>
   </section>
 
@@ -116,15 +116,15 @@ const notes = [
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" set:html={icon}></svg>
                 </span>
                 <span class="flex flex-col gap-1">
-                  <span class="text-[13px] text-[#807d78]">{label}</span>
-                  <span class="text-[15.5px] font-bold leading-[1.4] text-charcoal">{value}</span>
+                  <span class="text-[12px] text-[#807d78]">{label}</span>
+                  <span class="text-[16px] font-bold leading-[1.4] text-charcoal">{value}</span>
                 </span>
               </div>
             ))}
           </div>
-          <a href="#enquire" class="inline-flex items-center font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill bg-brand-yellow text-charcoal border border-brand-yellow [transition:background_0.3s_ease,_border-color_0.3s_ease] hover:bg-brand-yellow-dark hover:border-brand-yellow-dark">Book This Tour</a>
+          <a href="#enquire" class="inline-flex items-center font-body font-semibold text-[12px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill bg-brand-yellow text-charcoal border border-brand-yellow [transition:background_0.3s_ease,_border-color_0.3s_ease] hover:bg-brand-yellow-dark hover:border-brand-yellow-dark">Book This Tour</a>
         </div>
-        <p class="py-5 mt-6 text-[14.5px] leading-[1.7] text-[#c0392b]">Note: Use this as a general guide to get an idea of the tour. Dates, pace and detours are yours to set, so the itinerary will be customised to the season, your interests, group size and preferred duration.</p>
+        <p class="py-5 mt-6 text-[14px] leading-[1.7] text-[#c0392b]">Note: Use this as a general guide to get an idea of the tour. Dates, pace and detours are yours to set, so the itinerary will be customised to the season, your interests, group size and preferred duration.</p>
 
         <!-- Overview -->
         <div class="mt-14">
@@ -138,7 +138,7 @@ const notes = [
           <h2 class={blockH2}>Tour Highlights</h2>
           <ul class="grid gap-x-8 gap-y-3.5 min-[640px]:grid-cols-2">
             {highlights.map((h) => (
-              <li class="flex items-start gap-2.5 text-[15px] leading-[1.6] text-[#55534f]">
+              <li class="flex items-start gap-2.5 text-[14px] leading-[1.6] text-[#55534f]">
                 <svg class="shrink-0 mt-1 text-brand-yellow-dark" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 7"></path></svg>
                 {h}
               </li>
@@ -152,7 +152,7 @@ const notes = [
           <div class="border-t border-t-charcoal-line">
             {days.map((d, i) => (
               <FaqItem q={`Day ${d.n} — ${d.title}`} open={i === 0}>
-                <p class="text-[11px] font-semibold tracking-[0.14em] uppercase text-brand-yellow-dark mb-3">{d.place} · {d.facts.join('  ·  ')}</p>
+                <p class="text-[12px] font-semibold tracking-[0.14em] uppercase text-brand-yellow-dark mb-3">{d.place} · {d.facts.join('  ·  ')}</p>
                 <p>{d.body}</p>
               </FaqItem>
             ))}
@@ -164,13 +164,13 @@ const notes = [
           <div>
             <h2 class={blockH2}>What's Included</h2>
             <ul class="flex flex-col gap-3">
-              {included.map((t) => (<li class="flex items-start gap-2.5 text-[15px] leading-[1.5] text-[#55534f]"><svg class="shrink-0 mt-0.75 text-brand-yellow-dark" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 7"></path></svg>{t}</li>))}
+              {included.map((t) => (<li class="flex items-start gap-2.5 text-[14px] leading-[1.5] text-[#55534f]"><svg class="shrink-0 mt-0.75 text-brand-yellow-dark" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4L19 7"></path></svg>{t}</li>))}
             </ul>
           </div>
           <div>
             <h2 class={blockH2}>Not Included</h2>
             <ul class="flex flex-col gap-3">
-              {excluded.map((t) => (<li class="flex items-start gap-2.5 text-[15px] leading-[1.5] text-[#55534f]"><svg class="shrink-0 mt-0.75 text-[#c0392b]" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"></path></svg>{t}</li>))}
+              {excluded.map((t) => (<li class="flex items-start gap-2.5 text-[14px] leading-[1.5] text-[#55534f]"><svg class="shrink-0 mt-0.75 text-[#c0392b]" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"></path></svg>{t}</li>))}
             </ul>
           </div>
         </div>
@@ -181,8 +181,8 @@ const notes = [
           <div class="grid gap-8">
             {notes.map(([t, d]) => (
               <div>
-                <h3 class="text-[18px]">{t}</h3>
-                <p class="mt-2 text-[14.5px] leading-[1.75] text-[#55534f]">{d}</p>
+                <h3 class="text-[16px]">{t}</h3>
+                <p class="mt-2 text-[14px] leading-[1.75] text-[#55534f]">{d}</p>
               </div>
             ))}
           </div>
@@ -190,14 +190,14 @@ const notes = [
 
         <!-- Package cost -->
         <div class="mt-14 bg-soft-white border border-charcoal-line border-l-4 border-l-brand-yellow p-8 max-[767px]:p-6">
-          <h3 class="text-[22px]">Package Cost</h3>
-          <p class="mt-3 text-[15px] leading-[1.8] text-[#55534f]">On top of the SDF of USD 100 per person per night, there is an additional cost covering hotel rooms, meals, entrance fees, guide and private vehicle. Send us an enquiry and we'll customise a package for your dates, budget and interests.</p>
+          <h3 class="text-[20px]">Package Cost</h3>
+          <p class="mt-3 text-[14px] leading-[1.8] text-[#55534f]">On top of the SDF of USD 100 per person per night, there is an additional cost covering hotel rooms, meals, entrance fees, guide and private vehicle. Send us an enquiry and we'll customise a package for your dates, budget and interests.</p>
         </div>
 
         <!-- Enquire -->
-        <div class="mt-8 bg-charcoal text-soft-white p-9 max-[767px]:p-6" id="enquire">
-          <h3 class="text-[26px] text-soft-white">Enquire About This Tour</h3>
-          <p class="mt-3 text-[15px] leading-[1.8] text-[rgba(250,250,248,0.75)]">Fill out the form and one of our travel designers will come back with availability and pricing for Dzongs of the Western Valleys.</p>
+        <div class="mt-8 bg-soft-white text-charcoal border border-charcoal-line p-9 max-[767px]:p-6" id="enquire">
+          <h3 class="text-[24px] text-charcoal">Enquire About This Tour</h3>
+          <p class="mt-3 text-[14px] leading-[1.8] text-[#55534f]">Fill out the form and one of our travel designers will come back with availability and pricing for Dzongs of the Western Valleys.</p>
           <form class="mt-7 grid gap-5" action="/contact.html" method="get">
             <div class="grid gap-5 min-[640px]:grid-cols-2">
               <label class={fieldLabel}>Full Name<input type="text" name="name" required placeholder="Your full name" class={fieldInput} /></label>
@@ -206,7 +206,7 @@ const notes = [
               <label class={fieldLabel}>Preferred Travel Dates<input type="text" name="dates" placeholder="e.g. March 2027" class={fieldInput} /></label>
             </div>
             <label class={fieldLabel}>Message<textarea name="message" rows="4" placeholder="Group size, interests or anything else we should know…" class={fieldInput}></textarea></label>
-            <button type="submit" class="justify-self-start font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill bg-brand-yellow text-charcoal border border-brand-yellow [transition:background_0.3s_ease] hover:bg-brand-yellow-dark">Submit Enquiry</button>
+            <button type="submit" class="justify-self-start font-body font-semibold text-[12px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill bg-brand-yellow text-charcoal border border-brand-yellow [transition:background_0.3s_ease] hover:bg-brand-yellow-dark">Submit Enquiry</button>
           </form>
         </div>
       </div>
@@ -219,13 +219,13 @@ const notes = [
             <a href={r.href} class="group flex gap-4 py-5 border-b border-b-charcoal-line">
               <img src={r.img} alt={r.alt} loading="lazy" class="shrink-0 w-24 h-24 object-cover" />
               <div>
-                <h4 class="font-body text-[15px] font-semibold leading-[1.3] group-hover:text-brand-yellow-dark [transition:color_0.3s_ease]">{r.title}</h4>
-                <p class="mt-1.5 text-[13px] leading-[1.55] text-[#6b6864]">{r.text}</p>
+                <h4 class="font-body text-[14px] font-semibold leading-[1.3] group-hover:text-brand-yellow-dark [transition:color_0.3s_ease]">{r.title}</h4>
+                <p class="mt-1.5 text-[12px] leading-[1.55] text-[#6b6864]">{r.text}</p>
               </div>
             </a>
           ))}
         </div>
-        <a href="/cultural-journeys.html" class="mt-6 inline-flex items-center font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill border border-charcoal text-charcoal [transition:background_0.3s_ease,_color_0.3s_ease] hover:bg-charcoal hover:text-soft-white">All Cultural Journeys</a>
+        <a href="/cultural-journeys.html" class="mt-6 inline-flex items-center font-body font-semibold text-[12px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill border border-charcoal text-charcoal [transition:background_0.3s_ease,_color_0.3s_ease] hover:bg-charcoal hover:text-soft-white">All Cultural Journeys</a>
       </aside>
     </div>
   </section>
@@ -238,7 +238,7 @@ const notes = [
           <p class={`${eyebrow} on-light`}>BEFORE YOU BOOK</p>
           <h2 class={h2}>Questions About This Journey</h2>
         </div>
-        <a href="/faq.html" class="inline-flex items-center gap-2 font-semibold text-[13px] tracking-[0.06em] uppercase text-charcoal border-b border-b-charcoal pb-0.75 [transition:color_0.3s_ease,_border-color_0.3s_ease,_gap_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark hover:gap-3">General FAQs
+        <a href="/faq.html" class="inline-flex items-center gap-2 font-semibold text-[12px] tracking-[0.06em] uppercase text-charcoal border-b border-b-charcoal pb-0.75 [transition:color_0.3s_ease,_border-color_0.3s_ease,_gap_0.3s_ease] hover:text-brand-yellow-dark hover:border-brand-yellow-dark hover:gap-3">General FAQs
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>
       </div>

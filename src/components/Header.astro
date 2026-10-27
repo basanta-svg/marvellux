@@ -35,24 +35,24 @@ const mobileNav = [...navLeft, ...navRight];
       mobileNav.map((g) =>
         g.children ? (
           <li class="mobile-nav-item">
-            <button class="w-full flex items-center justify-between py-4.5 px-0.5 font-heading text-[22px] text-soft-white [&_svg]:w-4 [&_svg]:h-4 [&_svg]:[transition:transform_0.3s_ease] [.mobile-nav-item.open_&_svg]:[transform:rotate(45deg)] mobile-nav-toggle">
+            <button class="w-full flex items-center justify-between py-4.5 px-0.5 font-heading text-[20px] text-soft-white [&_svg]:w-4 [&_svg]:h-4 [&_svg]:[transition:transform_0.3s_ease] [.mobile-nav-item.open_&_svg]:[transform:rotate(45deg)] mobile-nav-toggle">
               {g.label}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
             </button>
-            <div class="max-h-0 overflow-hidden [transition:max-height_0.4s_ease] [.mobile-nav-item.open_&]:max-h-80 [&_a]:block [&_a]:pt-3 [&_a]:pr-0.5 [&_a]:pb-3 [&_a]:pl-3.5 [&_a]:text-[15px] [&_a]:text-[rgba(250,250,248,0.75)] [&_a]:border-l-2 [&_a]:border-l-brand-yellow [&_a]:mb-0.5">
+            <div class="max-h-0 overflow-hidden [transition:max-height_0.4s_ease] [.mobile-nav-item.open_&]:max-h-80 [&_a]:block [&_a]:pt-3 [&_a]:pr-0.5 [&_a]:pb-3 [&_a]:pl-3.5 [&_a]:text-[14px] [&_a]:text-[rgba(250,250,248,0.75)] [&_a]:border-l-2 [&_a]:border-l-brand-yellow [&_a]:mb-0.5">
               {g.children.map((c) => <a href={c.href}>{c.label}</a>)}
             </div>
           </li>
         ) : (
           <li>
-            <a class="w-full flex items-center justify-between py-4.5 px-0.5 font-heading text-[22px] text-soft-white" href={g.href}>{g.label}</a>
+            <a class="w-full flex items-center justify-between py-4.5 px-0.5 font-heading text-[20px] text-soft-white" href={g.href}>{g.label}</a>
           </li>
         ),
       )
     }
   </ul>
   <div class="mt-8 flex flex-col gap-3.5">
-    <a href="/contact.html" class="inline-flex items-center gap-2.5 font-body font-semibold text-[13px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease,_transform_0.3s_ease] whitespace-nowrap active:[transform:scale(0.97)] bg-transparent text-soft-white border border-white-line hover:border-brand-yellow hover:text-brand-yellow w-full justify-center">Chat With Us</a>
+    <a href="/contact.html" class="inline-flex items-center gap-2.5 font-body font-semibold text-[12px] tracking-[0.06em] uppercase py-4 px-7.5 rounded-pill [transition:background_0.3s_ease,_color_0.3s_ease,_border-color_0.3s_ease,_transform_0.3s_ease] whitespace-nowrap active:[transform:scale(0.97)] bg-transparent text-soft-white border border-white-line hover:border-brand-yellow hover:text-brand-yellow w-full justify-center">Chat With Us</a>
   </div>
 </div>
 

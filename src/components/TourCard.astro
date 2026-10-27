@@ -32,20 +32,20 @@ const delayClass: Record<string, string> = { '1': '[transition-delay:0.1s]', '2'
   }
   <div class="absolute inset-0 z-2 pt-7 pr-6 pb-5.5 pl-6 text-soft-white pointer-events-none">
     <div class="absolute top-[26%] left-6 right-6 pointer-events-auto">
-      <h3 class="font-heading text-[22px] uppercase text-soft-white">
+      <h3 class="font-heading text-[20px] uppercase text-soft-white">
         {mediaLabel ? <a href={href} set:html={title} /> : <Fragment set:html={title} />}
       </h3>
       <div class="flex flex-wrap gap-y-2.5 gap-x-4.5 mt-3.5">
-        <span class="inline-flex items-center gap-1.5 text-[11.5px] font-semibold tracking-[0.03em] uppercase text-[rgba(250,250,248,0.85)] [&_svg]:w-3.5 [&_svg]:h-3.5 [&_svg]:shrink-0 [&_svg]:text-brand-yellow">
+        <span class="inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.03em] uppercase text-[rgba(250,250,248,0.85)] [&_svg]:w-3.5 [&_svg]:h-3.5 [&_svg]:shrink-0 [&_svg]:text-brand-yellow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
           {duration}
         </span>
-        <span class="inline-flex items-center gap-1.5 text-[11.5px] font-semibold tracking-[0.03em] uppercase text-[rgba(250,250,248,0.85)] [&_svg]:w-3.5 [&_svg]:h-3.5 [&_svg]:shrink-0 [&_svg]:text-brand-yellow">
+        <span class="inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.03em] uppercase text-[rgba(250,250,248,0.85)] [&_svg]:w-3.5 [&_svg]:h-3.5 [&_svg]:shrink-0 [&_svg]:text-brand-yellow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.5 20c0-3.9 2.9-7 6.5-7s6.5 3.1 6.5 7"></path></svg>
           {group}
         </span>
       </div>
     </div>
-    <a href={href} class="block pt-3.5 border-t border-t-brand-yellow text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-yellow [transition:color_0.3s_ease] hover:text-soft-white absolute left-6 right-6 bottom-5.5 pointer-events-auto">{cta}</a>
+    <a href={href} class="block pt-3.5 border-t border-t-brand-yellow text-[12px] font-semibold tracking-[0.08em] uppercase text-brand-yellow [transition:color_0.3s_ease] hover:text-soft-white absolute left-6 right-6 bottom-5.5 pointer-events-auto">{cta}</a>
   </div>
 </article>

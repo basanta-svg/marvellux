@@ -11,7 +11,6 @@ export interface NavGroup {
 export const experiences: NavLink[] = [
   { label: 'Cultural Journeys', href: '/cultural-journeys.html' },
   { label: 'Trekking', href: '/trekking.html' },
-  { label: 'Wellness', href: '/#experiences' },
   { label: 'Festivals', href: '/festivals.html' },
   { label: 'Adventure', href: '/adventures.html' },
 ];

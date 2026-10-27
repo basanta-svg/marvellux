@@ -13,8 +13,8 @@ const { image, alt, title, desc, href, cta } = Astro.props;
 <div class="relative h-115 rounded-none overflow-hidden min-[1024px]:h-140 after:content-[''] after:absolute after:inset-0 after:[background:linear-gradient(180deg,_rgba(0,0,0,0.15)_0%,_rgba(0,0,0,0.35)_45%,_rgba(0,0,0,0.85)_100%)] after:pointer-events-none [&_img]:absolute! [&_img]:inset-0! [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:[transition:transform_0.9s_ease] [&:hover_img]:[transform:scale(1.08)]">
   <img src={image} alt={alt} />
   <div class="absolute inset-0 z-2 flex flex-col pt-7 pr-6 pb-5.5 pl-6 text-soft-white">
-    <h3 class="font-heading text-[30px] uppercase text-soft-white mt-[34%]">{title}</h3>
-    <p class="mt-2.5 text-[13.5px] leading-[1.6] text-soft-white max-w-57.5">{desc}</p>
-    <a href={href} class="block pt-3.5 border-t border-t-brand-yellow text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-yellow [transition:color_0.3s_ease] mt-auto hover:text-soft-white">{cta}</a>
+    <h3 class="font-heading text-[32px] uppercase text-soft-white mt-[34%]">{title}</h3>
+    <p class="mt-2.5 text-[14px] leading-[1.6] text-soft-white max-w-57.5">{desc}</p>
+    <a href={href} class="block pt-3.5 border-t border-t-brand-yellow text-[12px] font-semibold tracking-[0.08em] uppercase text-brand-yellow [transition:color_0.3s_ease] mt-auto hover:text-soft-white">{cta}</a>
   </div>
 </div>

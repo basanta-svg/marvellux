@@ -10,9 +10,9 @@ const { id, initials, title, role, delay } = Astro.props;
 const delayClass: Record<string, string> = { '1': '[transition-delay:0.1s]', '2': '[transition-delay:0.2s]', '3': '[transition-delay:0.3s]' };
 ---
 
-<div class:list={["text-center scroll-mt-30 [&_h3]:text-[18px] [&_h3]:mt-5 [&_p]:mt-3! [&_p]:text-[13.5px]! [&_p]:leading-[1.65] [&_p]:text-[#55534f]", "opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] reveal", delay && delayClass[delay]]} id={id}>
-  <span class="w-23 h-23 my-0 mx-auto rounded-[50%] bg-brand-yellow flex items-center justify-center font-heading text-[28px] font-semibold text-charcoal">{initials}</span>
+<div class:list={["text-center scroll-mt-30 [&_h3]:text-[16px] [&_h3]:mt-5 [&_p]:mt-3! [&_p]:text-[14px]! [&_p]:leading-[1.65] [&_p]:text-[#55534f]", "opacity-[0] [transform:translateY(32px)] [transition:opacity_0.7s_ease,_transform_0.7s_ease] [&.is-visible]:opacity-[1] [&.is-visible]:[transform:translateY(0)] reveal", delay && delayClass[delay]]} id={id}>
+  <span class="w-23 h-23 my-0 mx-auto rounded-[50%] bg-brand-yellow flex items-center justify-center font-heading text-[24px] font-semibold text-charcoal">{initials}</span>
   <h3 set:html={title} />
-  <span class="block mt-1 text-[11.5px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark" set:html={role} />
+  <span class="block mt-1 text-[12px] font-semibold tracking-[0.08em] uppercase text-brand-yellow-dark" set:html={role} />
   <p><slot /></p>
 </div>
